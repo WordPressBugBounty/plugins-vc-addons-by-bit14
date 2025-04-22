@@ -3,9 +3,9 @@
 Contributors: pagebuilderaddons, genetechproducts
 Tags: addons for wpbakery page builder, wpbakery addons, web addons, woocommerce addons, wpbakery page builder, wpbakery page templates, website addons for wpbakery
 Requires at least: 4.0
-Tested up to: 6.6.1
+Tested up to: 6.8
 Requires PHP: 7.0
-Stable tag: 1.4.7
+Stable tag: 1.5
 License: GPLv2 or later
 
 Clean, responsive, well designed addons for WPBakery Page Builder with custom post type
@@ -311,6 +311,9 @@ Open Visual Composer Editor -> click on add element -> click on tab PB Addons. c
 14. Business Hours
 
 == Changelog ==
+
+= 1.5 =
+- Updated: Compatible with WordPress version 6.81.4.
 
 = 1.4.7 =
 - Fixed: Various jQuery/JavaScript issues.

@@ -3,7 +3,7 @@
 /*
 Plugin Name: Page Builder Addons for WPBakery
 Description: Page Builder Addons for WPBakery are a pack of premium quality addons
-Version: 1.4.7
+Version: 1.5
 Author: Page Builder Addons
 Author URI: https://www.pagebuilderaddons.com
 Text Domain: bit14
