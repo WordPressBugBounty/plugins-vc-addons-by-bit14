@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class WPBakeryShortCode_bit_tabs  extends WPBakeryShortCodesContainer {
 
 
@@ -113,14 +117,14 @@ class WPBakeryShortCode_bit_tabs  extends WPBakeryShortCodesContainer {
 }
 vc_map(
     array(
-        "name"                                      =>  __( 'Tabs', 'bit14' ),
-        "description"                               =>  __( 'Display detailed content in a compact layout', 'bit14' ),
+        "name"                                      =>  __( 'Tabs', 'vc-addons-by-bit14' ),
+        "description"                               =>  __( 'Display detailed content in a compact layout', 'vc-addons-by-bit14' ),
         "base"                                      => "Bit_Tabs",
         "class"                                     => "Bit_Tabs",
         "as_parent"                                 => array('only' => 'Bit_Tab'),
         "content_element"                           => true,
         "is_container"                              => true,
-        'category'      => __('PB Addons', 'bit14'),
+        'category'      => __('PB Addons', 'vc-addons-by-bit14'),
         'icon'                                      => 'icon-bit-tab',
         "show_settings_on_create"                   => true,
         "js_view"                                   => 'VcColumnView',
@@ -128,23 +132,23 @@ vc_map(
 
             array(
                 'type'          =>  'textfield',
-                'heading'       =>  __( 'Element ID', 'bit14' ),
+                'heading'       =>  __( 'Element ID', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'id',
-                'description'   =>  __( 'Element ID', 'bit14' ),
+                'description'   =>  __( 'Element ID', 'vc-addons-by-bit14' ),
             ),
 
             array(
                 'type'          =>  'textfield',
-                'heading'       =>  __( 'Extra Class Name', 'bit14' ),
+                'heading'       =>  __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'class',
-                'description'   =>  __( 'Extra Class Name', 'bit14' ),
+                'description'   =>  __( 'Extra Class Name', 'vc-addons-by-bit14' ),
             ),
 
             array(
                 'type'          => 'dropdown',
-                'heading'       => __( 'Theme', 'bit14' ),
+                'heading'       => __( 'Theme', 'vc-addons-by-bit14' ),
                 'param_name'    => 'tab_theme',
-                'description'   => __( 'Select a theme', 'bit14' ),
+                'description'   => __( 'Select a theme', 'vc-addons-by-bit14' ),
                 'value'         => array(
                     'Theme Style 1' => 'tab-style-one',
                     'Theme Style 2' => 'tab-style-two',
@@ -154,16 +158,16 @@ vc_map(
 
             array(
                 'type'          =>  'colorpicker',
-                'heading'       =>  __( 'Active Tab Color', 'bit14' ),
-                'description'       =>  __( 'Selected color will be applied on the active tab', 'bit14' ),
+                'heading'       =>  __( 'Active Tab Color', 'vc-addons-by-bit14' ),
+                'description'       =>  __( 'Selected color will be applied on the active tab', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'tabs_bg_color',
                 'value'         =>  '#ffffff'
             ),
 
             array(
                 'type'          =>  'colorpicker',
-                'heading'       =>  __( 'Inactive Tab Color', 'bit14' ),
-                'description'       =>  __( 'Selected color will be applied on the inactive tab(s)', 'bit14' ),
+                'heading'       =>  __( 'Inactive Tab Color', 'vc-addons-by-bit14' ),
+                'description'       =>  __( 'Selected color will be applied on the inactive tab(s)', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'tabs_secondary_color',
                 'value'         =>  '#e4e4e4'
             ),
@@ -171,21 +175,21 @@ vc_map(
 
             array(
                 'type'          => 'colorpicker',
-                'heading'       =>  __( 'Font Color', 'bit14' ),
+                'heading'       =>  __( 'Font Color', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'tabs_font_color',
                 'value'         =>  '#9a9a9a'
             ),
 
             array(
                 'type'          => 'textfield',
-                'heading'       =>  __( 'Vertical Padding', 'bit14' ),
+                'heading'       =>  __( 'Vertical Padding', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'tabs_ver_padding',
                 'description'   =>  'Enter the desired number in (pixels) to adjust inner spacing'
             ),
 
             array(
                 'type'          => 'textfield',
-                'heading'       =>  __( 'Horizontal Padding', 'bit14' ),
+                'heading'       =>  __( 'Horizontal Padding', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'tabs_hori_padding',
                 'description'   =>  'Enter the desired number in (pixels) to adjust inner spacing'
             ),

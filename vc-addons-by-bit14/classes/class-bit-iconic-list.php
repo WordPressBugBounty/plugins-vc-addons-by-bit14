@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class PBWB_Iconic_List extends WPBakeryShortCode {
 
     function __construct(){
@@ -20,7 +24,7 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
         $google_fonts           = array(
             "type"          => "vc_links",
             "param_name"    => "bit_caption_url",
-            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'bit14' ),
+            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'vc-addons-by-bit14' ),
         );
 
         if($enable_googlefonts == "1"){
@@ -29,8 +33,8 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
                 'param_name' => 'google_text_font',
                 'settings' => array(
                     'fields' => array(
-                        'font_family_description' => __( 'Select Font Family.', 'bit14' ),
-                        'font_style_description' => __( 'Select Font Style.', 'bit14' ),
+                        'font_family_description' => __( 'Select Font Family.', 'vc-addons-by-bit14' ),
+                        'font_style_description' => __( 'Select Font Style.', 'vc-addons-by-bit14' ),
                     ),
                 ), 
                 'weight' => 0,
@@ -40,30 +44,30 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
         // Map the block with vc_map()
         vc_map(
             array(
-                'name'          => __('Iconic List', 'bit14'),
+                'name'          => __('Iconic List', 'vc-addons-by-bit14'),
                 'base'          => 'iconic-list',
-                'description'   => __('Add iconic lists to make the website vibrant and interactive', 'bit14'),
-                'category'      => __('PB Addons', 'bit14'),
+                'description'   => __('Add iconic lists to make the website vibrant and interactive', 'vc-addons-by-bit14'),
+                'category'      => __('PB Addons', 'vc-addons-by-bit14'),
                 'icon'          => plugin_dir_url(__DIR__) . 'assets/images/iconic-list.png',
                 'params'        => array(
                     array(
                         'type'          =>  'textfield',
                         'class'         =>  'iconiclist_id',
-                        'heading'       =>  __( 'ID', 'bit14' ),
+                        'heading'       =>  __( 'ID', 'vc-addons-by-bit14' ),
                         'description'   =>  'ID for your list',
                         'param_name'    =>  'id',
                     ),
                     array(
                         'type'          =>  'textfield',
                         'class'         =>  'iconiclist_class',
-                        'heading'       =>  __( 'class', 'bit14' ),
+                        'heading'       =>  __( 'class', 'vc-addons-by-bit14' ),
                         'description'   =>  'Class for your list',
                         'param_name'    =>  'class',
                     ),
                     array(
                         'type'          =>  'dropdown',
                         'class'         =>  'iconiclist_type',
-                        'heading'       =>  __( 'List type', 'bit14' ),
+                        'heading'       =>  __( 'List type', 'vc-addons-by-bit14' ),
                         'description'   =>  'Select the type of list to be displayed',
                         'param_name'    =>  'type',
                         'value'         =>  array(
@@ -74,7 +78,7 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
                     array(
                         'type'          =>  'dropdown',
                         'class'         =>  'iconiclist_theme',
-                        'heading'       =>  __( 'List Theme', 'bit14' ),
+                        'heading'       =>  __( 'List Theme', 'vc-addons-by-bit14' ),
                         'description'   =>  'Select the type of Icon to be displayed',
                         'param_name'    =>  'theme_list',
                         'value'         =>  array(
@@ -89,7 +93,7 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
                     array(
                         'type'          =>  'dropdown',
                         'class'         =>  'iconiclist_quantity',
-                        'heading'       =>  __( 'List item(s) in a row', 'bit14' ),
+                        'heading'       =>  __( 'List item(s) in a row', 'vc-addons-by-bit14' ),
                         'description'   =>  'Number of list item(s) to be displayed in one row',
                         'param_name'    =>  'quantity',
                         'value'         =>  array(
@@ -101,9 +105,9 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Background Color', 'bit14' ),
+                        'heading'       => __( 'Background Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'bg_color',
-                        'description'   => __( 'Color for background.', 'bit14' ),
+                        'description'   => __( 'Color for background.', 'vc-addons-by-bit14' ),
                         'value'         => '',
                        /* 'dependency'    => array(
                             'element'       => 'theme_list',
@@ -112,9 +116,9 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Hover', 'bit14' ),
+                        'heading'       => __( 'Hover', 'vc-addons-by-bit14' ),
                         'param_name'    => 'hover_color',
-                        'description'   => __( 'Color for background hover.', 'bit14' ),
+                        'description'   => __( 'Color for background hover.', 'vc-addons-by-bit14' ),
                         'value'         => '',
                        /* 'dependency'    => array(
                             'element'       => 'theme_list',
@@ -123,21 +127,21 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Text Color', 'bit14' ),
+                        'heading'       => __( 'Text Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'text_color',
                         'value'         => '#000000',
                     ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Hover Text Color', 'bit14' ),
+                        'heading'       => __( 'Hover Text Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'hover_text_color',
-                        'description'   => __( 'Text color on hover.', 'bit14' ),
+                        'description'   => __( 'Text color on hover.', 'vc-addons-by-bit14' ),
                     ),
                     /*array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Background Hover Animation', 'bit14' ),
+                        'heading'       => __( 'Background Hover Animation', 'vc-addons-by-bit14' ),
                         'param_name'    => 'bg_hover_animation',
-                        'description'   => __( 'Background color on hover animation.', 'bit14' ),
+                        'description'   => __( 'Background color on hover animation.', 'vc-addons-by-bit14' ),
                         'value'         =>  array(
                             'None'          =>  1,
                             'Bounce In'     =>  2,
@@ -156,9 +160,9 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
 
                             array(
                                 'type'          => 'dropdown',
-                                'heading'       => __( 'Show icon', 'bit14' ),
+                                'heading'       => __( 'Show icon', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'is_icon',
-                                'description'   => __( 'Show/Hide icon.', 'bit14' ),
+                                'description'   => __( 'Show/Hide icon.', 'vc-addons-by-bit14' ),
                                 'value'         => array(
                                     "Font Awesome"      =>  'fontawesome',
                                     /*"PB icons"          =>  'icomoon',*/
@@ -168,7 +172,7 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
 
                             array(
                                 'type'          => 'iconpicker',
-                                'heading'       => __( 'Icon', 'js_composer' ),
+                                'heading'       => __( 'Icon', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'icon',
                                 'value'         => 'vc_pixel_icon vc_pixel_icon-alert',
                                 'settings'      => array(
@@ -179,11 +183,11 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
                                     'element'       => 'is_icon',
                                     'value'         => 'fontawesome',
                                 ),
-                                'description'   => __( 'Select icon from library.', 'js_composer' ),
+                                'description'   => __( 'Select icon from library.', 'vc-addons-by-bit14' ),
                             ),
                             array(
                                 'type'          =>  'attach_image',
-                                'heading'       =>  __( 'Attach Custom Icon', 'bit14' ),
+                                'heading'       =>  __( 'Attach Custom Icon', 'vc-addons-by-bit14' ),
                                 'description'   =>  'Attached icon will be add in the iconic list',
                                 'param_name'    =>  'image',
                                 'dependency'    => array(
@@ -193,7 +197,7 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
                             ),
                             array(
                                 'type'          =>  'textfield',
-                                'heading'       =>  __( 'Attachment Alternate Text', 'bit14' ),
+                                'heading'       =>  __( 'Attachment Alternate Text', 'vc-addons-by-bit14' ),
                                 'param_name'    =>  'image_alt',
                                 'dependency'    => array(
                                     'element'       => 'is_icon',
@@ -202,9 +206,9 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
                             ),
                             array(
                                 'type'          => 'colorpicker',
-                                'heading'       => __( 'Hover Icon Color', 'bit14' ),
+                                'heading'       => __( 'Hover Icon Color', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'hover_icon_color',
-                                'description'   => __( 'Icon color on hover.', 'bit14' ),
+                                'description'   => __( 'Icon color on hover.', 'vc-addons-by-bit14' ),
                                 'dependency' => array(
                                     'element' => 'is_icon',
                                     'value' => 'fontawesome',
@@ -213,16 +217,16 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
                             array(
                                 'type'          =>  'textfield',
                                 'class'         =>  'iconiclist_title',
-                                'heading'       =>  __( 'Title', 'bit14' ),
+                                'heading'       =>  __( 'Title', 'vc-addons-by-bit14' ),
                                 'description'   =>  'Title of your list item',
                                 'param_name'    =>  'title',
                                 'admin_label'   => true,
                             ),
                             array(
                                 'type'          => 'dropdown',
-                                'heading'       => __( 'Add Description', 'bit14' ),
+                                'heading'       => __( 'Add Description', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'is_description',
-                                'description'   => __( 'Show/Hide Description.', 'bit14' ),
+                                'description'   => __( 'Show/Hide Description.', 'vc-addons-by-bit14' ),
                                 'value'         => array(
                                     "Yes"      =>  'show',
                                     "No"       =>  'hide'
@@ -231,7 +235,7 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
                             array(
                                 'type'          =>  'textarea',
                                 'class'         =>  'iconiclist_description',
-                                'heading'       =>  __( 'Description', 'bit14' ),
+                                'heading'       =>  __( 'Description', 'vc-addons-by-bit14' ),
                                 'description'   =>  'Description of your list item',
                                 'param_name'    =>  'description',
                                 'dependency'    => array(
@@ -242,21 +246,21 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
                             // array(
                             //     'type'          =>  'textfield',
                             //     'class'         =>  'iconiclist_content_link',
-                            //     'heading'       =>  __( 'Content Link', 'bit14' ),
+                            //     'heading'       =>  __( 'Content Link', 'vc-addons-by-bit14' ),
                             //     'description'   =>  'Link On your content',
                             //     'param_name'    =>  'content_link',
                             // ),
                             array(
                                 'type'          =>  'textfield',
                                 'class'         =>  'iconiclist_id',
-                                'heading'       =>  __( 'ID', 'bit14' ),
+                                'heading'       =>  __( 'ID', 'vc-addons-by-bit14' ),
                                 'description'   =>  'ID for your list item',
                                 'param_name'    =>  'id',
                             ),
                             array(
                                 'type'          =>  'textfield',
                                 'class'         =>  'iconiclist_class',
-                                'heading'       =>  __( 'class', 'bit14' ),
+                                'heading'       =>  __( 'class', 'vc-addons-by-bit14' ),
                                 'description'   =>  'Class for your list item',
                                 'param_name'    =>  'class',
                             ),
@@ -266,7 +270,7 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
                     array(
                         "type"          => "vc_links",
                         "param_name"    => "bit_caption_url",
-                        "description"   => __( '<span class="bit14-pro-link" style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;">Get the Pro version for more elements and customization options.</a></span>', 'bit14' ),
+                        "description"   => __( '<span class="bit14-pro-link" style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;">Get the Pro version for more elements and customization options.</a></span>', 'vc-addons-by-bit14' ),
                     ),
 
                     
@@ -274,7 +278,7 @@ class PBWB_Iconic_List extends WPBakeryShortCode {
             )
         );
 
-        vc_map_update( "icon_type" , array(__( 'icomoon', 'js_composer' ) => 'icomoon'));
+        vc_map_update( "icon_type" , array(__( 'icomoon', 'vc-addons-by-bit14' ) => 'icomoon'));
 
     }
 

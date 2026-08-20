@@ -1,4 +1,8 @@
 <?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 class PBWB_Headings extends WPBakeryShortCode {
     function __construct(){
         // add_action( 'admin_init', array( $this, 'pbwb_mapping' ) );
@@ -16,7 +20,7 @@ class PBWB_Headings extends WPBakeryShortCode {
         $google_fonts           = array(
             "type"          => "vc_links",
             "param_name"    => "bit_caption_url",
-            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'bit14' ),
+            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'vc-addons-by-bit14' ),
         );
 
         if($enable_googlefonts == "1"){
@@ -25,8 +29,8 @@ class PBWB_Headings extends WPBakeryShortCode {
                 'param_name' => 'google_text_font',
                 'settings' => array(
                     'fields' => array(
-                        'font_family_description' => __( 'Select Font Family.', 'bit14' ),
-                        'font_style_description' => __( 'Select Font Style.', 'bit14' ),
+                        'font_family_description' => __( 'Select Font Family.', 'vc-addons-by-bit14' ),
+                        'font_style_description' => __( 'Select Font Style.', 'vc-addons-by-bit14' ),
                     ),
                 ), 
                 'weight' => 0,
@@ -36,36 +40,36 @@ class PBWB_Headings extends WPBakeryShortCode {
         // Map the block with vc_map()
         vc_map(
             array(
-                'name'          => __('Headings', 'bit14'),
+                'name'          => __('Headings', 'vc-addons-by-bit14'),
                 'base'          => 'bit_headings',
-                'description'   => __('Enhance the Headings of different sections on the webpage', 'bit14'),
-                'category'      => __('PB Addons', 'bit14'),
+                'description'   => __('Enhance the Headings of different sections on the webpage', 'vc-addons-by-bit14'),
+                'category'      => __('PB Addons', 'vc-addons-by-bit14'),
                 'icon'          => plugin_dir_url(__DIR__) . 'assets/images/Heading.png',
                 'params'        => array(
 
                     array(
                         'type'          =>  'textfield',
-                        'heading'       =>  __( 'Element ID', 'bit14' ),
+                        'heading'       =>  __( 'Element ID', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'id',
-                        'description'   =>  __( 'Element ID', 'bit14' ),
+                        'description'   =>  __( 'Element ID', 'vc-addons-by-bit14' ),
                     ),
 
                     array(
                         'type'          =>  'textfield',
-                        'heading'       =>  __( 'Extra Class Name', 'bit14' ),
+                        'heading'       =>  __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'class',
-                        'description'   =>  __( 'Extra Class Name', 'bit14' ),
+                        'description'   =>  __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                     ),
 
                     array(
                         'type'          =>  'textfield',
-                        'heading'       =>  __( 'Heading Text', 'bit14' ),
+                        'heading'       =>  __( 'Heading Text', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'heading',
                     ),
                     
                     array(
                         'type'          =>  'dropdown',
-                        'heading'       =>  __( 'Heading Position', 'bit14' ),
+                        'heading'       =>  __( 'Heading Position', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'heading_position',
                         'value'         => array(
                             'Left'            =>  'left',
@@ -76,14 +80,14 @@ class PBWB_Headings extends WPBakeryShortCode {
 
                     array(
                         'type'          =>  'colorpicker',
-                        'heading'       =>  __( 'Heading Color', 'bit14' ),
+                        'heading'       =>  __( 'Heading Color', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'heading_color',
                         'value'         => '#000',
                     ),
 
                     array(
                         'type'          =>  'dropdown',
-                        'heading'       =>  __( 'Select Heading Style', 'bit14' ),
+                        'heading'       =>  __( 'Select Heading Style', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'heading_styles',
                         'value'         => array(
                             'Border Top'              =>  'bdr_top',
@@ -96,7 +100,7 @@ class PBWB_Headings extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          =>  'dropdown',
-                        'heading'       =>  __( 'Select Heading Style', 'bit14' ),
+                        'heading'       =>  __( 'Select Heading Style', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'heading_tags',
                         'value'         => array(
                             'H1'    =>  'h1',
@@ -110,7 +114,7 @@ class PBWB_Headings extends WPBakeryShortCode {
 
                     array(
                         'type'          =>  'colorpicker',
-                        'heading'       =>  __( 'Border Color', 'bit14' ),
+                        'heading'       =>  __( 'Border Color', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'border_color',
                         'value'         => '#000',
                         'dependency'    => array(
@@ -121,7 +125,7 @@ class PBWB_Headings extends WPBakeryShortCode {
 
                     array(
                         'type'          =>  'colorpicker',
-                        'heading'       =>  __( 'Background Color', 'bit14' ),
+                        'heading'       =>  __( 'Background Color', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'background_color',
                         'value'         => '#000',
                         'dependency'    => array(
@@ -132,7 +136,7 @@ class PBWB_Headings extends WPBakeryShortCode {
 
                     array(
                         'type'          =>  'iconpicker',
-                        'heading'       =>  __( 'Icon', 'bit14' ),
+                        'heading'       =>  __( 'Icon', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'icon_pick',
                         'value'         => 'fa fa-heart',
                         'dependency'    => array(
@@ -143,7 +147,7 @@ class PBWB_Headings extends WPBakeryShortCode {
 
                     array(
                         'type'          =>  'colorpicker',
-                        'heading'       =>  __( 'Icon Color', 'bit14' ),
+                        'heading'       =>  __( 'Icon Color', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'icon_color',
                         'value'         => '#000',
                         'dependency'    => array(
@@ -154,7 +158,7 @@ class PBWB_Headings extends WPBakeryShortCode {
 
                     array(
                         'type'          =>  'dropdown',
-                        'heading'       =>  __( 'Icon Position', 'bit14' ),
+                        'heading'       =>  __( 'Icon Position', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'icon_position',
                         'value'         => array(
                             'Left'            =>  'left',
@@ -171,7 +175,7 @@ class PBWB_Headings extends WPBakeryShortCode {
                     array(
                         "type"          => "vc_links",
                         "param_name"    => "bit_caption_url",
-                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;">Get the Pro version for more elements and customization options.</a></span>', 'bit14' ),
+                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;">Get the Pro version for more elements and customization options.</a></span>', 'vc-addons-by-bit14' ),
                     ), 
                 ),
             )

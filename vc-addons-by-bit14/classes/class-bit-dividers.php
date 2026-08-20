@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class PBWB_Divider extends WPBakeryShortCode {
 	
 	function __construct(){
@@ -20,15 +24,15 @@ class PBWB_Divider extends WPBakeryShortCode {
         // Map the block with vc_map()
         vc_map( 
             array(
-                'name'          => __('Divider', 'bit14'),
-                'description'          => __('Upload and show videos of different formats on your website', 'bit14'),
+                'name'          => __('Divider', 'vc-addons-by-bit14'),
+                'description'          => __('Upload and show videos of different formats on your website', 'vc-addons-by-bit14'),
                 'base'          => 'bit_divider',
-                'category'      => __('PB Addons', 'bit14'),
+                'category'      => __('PB Addons', 'vc-addons-by-bit14'),
                 'icon'          => plugin_dir_url(__DIR__) . 'assets/images/divider.png',
                 'params'        => array(
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Theme Style', 'bit14' ),
+                        'heading'       => __( 'Theme Style', 'vc-addons-by-bit14' ),
                         'param_name'    => 'theme_style',
                         'value'         => array(
                             'Theme Style 1' => 'video-style-one',
@@ -38,7 +42,7 @@ class PBWB_Divider extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Type Divider', 'bit14' ),
+                        'heading'       => __( 'Type Divider', 'vc-addons-by-bit14' ),
                         'param_name'    => 'divider_type',
                         'value'         => array(
                             'Single Line Divider' => 'single-line-divider',
@@ -52,7 +56,7 @@ class PBWB_Divider extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Type Divider', 'bit14' ),
+                        'heading'       => __( 'Type Divider', 'vc-addons-by-bit14' ),
                         'param_name'    => 'divider_type_three',
                         'value'         => array(
                             'Solid'         => 'solid',
@@ -66,7 +70,7 @@ class PBWB_Divider extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Alignment', 'bit14' ),
+                        'heading'       => __( 'Alignment', 'vc-addons-by-bit14' ),
                         'param_name'    => 'alignment',
                         'value'         => array(
                             'Left'          => 'left',
@@ -80,7 +84,7 @@ class PBWB_Divider extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __('Width','bit14'),
+                        'heading'       => __('Width','vc-addons-by-bit14'),
                         'param_name'    => 'width',
                         'value'         => '50',
                         'dependency'    => array(
@@ -90,12 +94,12 @@ class PBWB_Divider extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          =>  'colorpicker',
-                        'heading'       =>  __( 'Divider Color', 'bit14' ),
+                        'heading'       =>  __( 'Divider Color', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'divider_color',
                     ),
                     array(
                         'type'          =>  'colorpicker',
-                        'heading'       =>  __( 'Icon Color', 'bit14' ),
+                        'heading'       =>  __( 'Icon Color', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'icon_color',
                         'dependency'    => array(
                             'element'       => 'theme_style',
@@ -104,7 +108,7 @@ class PBWB_Divider extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'iconpicker',
-                        'heading'       => __( 'Icon', 'bit14' ),
+                        'heading'       => __( 'Icon', 'vc-addons-by-bit14' ),
                         'param_name'    => 'icon',
                         'settings'      => array(
                             'emptyIcon'     => true,
@@ -117,7 +121,7 @@ class PBWB_Divider extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          =>  'attach_image',
-                        'heading'       =>  __( 'Icon Image', 'bit14' ),
+                        'heading'       =>  __( 'Icon Image', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'icon_image',
                         'dependency'    => array(
                             'element'       => 'theme_style',
@@ -126,17 +130,17 @@ class PBWB_Divider extends WPBakeryShortCode {
                     ), 
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Element ID', 'bit14' ),
+                        'heading'       => __( 'Element ID', 'vc-addons-by-bit14' ),
                         'param_name'    => 'id',
-                        'description'   => __( 'Element ID', 'bit14' ),
+                        'description'   => __( 'Element ID', 'vc-addons-by-bit14' ),
                         'group'         => 'Attributes'
                     ),
 
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Extra Class Name', 'bit14' ),
+                        'heading'       => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'param_name'    => 'class',
-                        'description'   => __( 'Extra Class Name', 'bit14' ),
+                        'description'   => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'group'         => 'Attributes'
                     ),
                 ),

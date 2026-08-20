@@ -1,4 +1,8 @@
 <?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 function pbwb_addons_list_page(){
     do_action('pb_admin_pages_before_content');
     ?>

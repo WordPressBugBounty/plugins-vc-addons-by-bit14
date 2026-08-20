@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class PBWB_Audio_Player extends WPBakeryShortCode {
     function __construct(){
 
@@ -20,7 +24,7 @@ class PBWB_Audio_Player extends WPBakeryShortCode {
         $google_fonts           = array(
             "type"          => "vc_links",
             "param_name"    => "bit_caption_url",
-            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'bit14' ),
+            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'vc-addons-by-bit14' ),
         );
 
         if($enable_googlefonts == "1"){
@@ -29,8 +33,8 @@ class PBWB_Audio_Player extends WPBakeryShortCode {
                 'param_name' => 'google_text_font',
                 'settings' => array(
                     'fields' => array(
-                        'font_family_description' => __( 'Select Font Family.', 'bit14' ),
-                        'font_style_description' => __( 'Select Font Style.', 'bit14' ),
+                        'font_family_description' => __( 'Select Font Family.', 'vc-addons-by-bit14' ),
+                        'font_style_description' => __( 'Select Font Style.', 'vc-addons-by-bit14' ),
                     ),
                 ), 
                 'weight' => 0,
@@ -41,15 +45,15 @@ class PBWB_Audio_Player extends WPBakeryShortCode {
         // Map the block with vc_map()
         vc_map(
             array(
-                'name'          => __('Audio Player', 'bit14'),
+                'name'          => __('Audio Player', 'vc-addons-by-bit14'),
                 'base'          => 'audio_player',
-                'description'   => __('Add audio player on your web page with multiple styling options', 'bit14'),
-                'category'      => __('PB Addons', 'bit14'),
+                'description'   => __('Add audio player on your web page with multiple styling options', 'vc-addons-by-bit14'),
+                'category'      => __('PB Addons', 'vc-addons-by-bit14'),
                 'icon'          => plugin_dir_url(__DIR__) . 'assets/images/audio-player.png',
                 'params'        => array(
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Themes', 'bit14' ),
+                        'heading'       => __( 'Themes', 'vc-addons-by-bit14' ),
                         'param_name'    => 'theme_style',
                         'value'         => array(
                             'Theme One'         => 'audio-player-theme-one',
@@ -61,7 +65,7 @@ class PBWB_Audio_Player extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          =>  'attach_image',
-                        'heading'       =>  __( 'Audio Image', 'bit14' ),
+                        'heading'       =>  __( 'Audio Image', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'audio_image',
                         'dependency'    => array(
                             'element'       => 'theme_style',
@@ -70,7 +74,7 @@ class PBWB_Audio_Player extends WPBakeryShortCode {
                     ), 
                     array(
                         'type'          =>  'attach_image',
-                        'heading'       =>  __( 'Background Audio Image', 'bit14' ),
+                        'heading'       =>  __( 'Background Audio Image', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'bg_audio_image',
                         'dependency'    => array(
                             'element'       => 'theme_style',
@@ -79,7 +83,7 @@ class PBWB_Audio_Player extends WPBakeryShortCode {
                     ), 
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Audio Category', 'bit14' ),
+                        'heading'       => __( 'Audio Category', 'vc-addons-by-bit14' ),
                         'param_name'    => 'audio_category',
                         'value'         => array(
                             'Link'         => 'link',
@@ -88,7 +92,7 @@ class PBWB_Audio_Player extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Audio Link', 'bit14' ),
+                        'heading'       => __( 'Audio Link', 'vc-addons-by-bit14' ),
                         'param_name'    => 'audio_link',
                         'admin_label'   => true,
                         'dependency'    => array(
@@ -98,7 +102,7 @@ class PBWB_Audio_Player extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'attach_image',
-                        'heading'       => __( 'Upload Audio', 'bit14' ),
+                        'heading'       => __( 'Upload Audio', 'vc-addons-by-bit14' ),
                         'param_name'    => 'audio_upload',
                         'dependency'    => array(
                             'element'       => 'audio_category',
@@ -107,7 +111,7 @@ class PBWB_Audio_Player extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Audio Extension', 'bit14' ),
+                        'heading'       => __( 'Audio Extension', 'vc-addons-by-bit14' ),
                         'param_name'    => 'audio_extension',
                         'value'         => array(
                             'mp3'         => 'mp3',
@@ -119,19 +123,19 @@ class PBWB_Audio_Player extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Audio Title', 'bit14' ),
+                        'heading'       => __( 'Audio Title', 'vc-addons-by-bit14' ),
                         'param_name'    => 'audio_title',
                         'admin_label'   => true,
                     ),
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Artist Name', 'bit14' ),
+                        'heading'       => __( 'Artist Name', 'vc-addons-by-bit14' ),
                         'param_name'    => 'artist_name',
                         'admin_label'   => true,
                     ),
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Preload', 'bit14' ),
+                        'heading'       => __( 'Preload', 'vc-addons-by-bit14' ),
                         'param_name'    => 'preload_audio',
                         'value'         => array(
                             'Auto'          => 'auto',
@@ -141,55 +145,55 @@ class PBWB_Audio_Player extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'checkbox',
-                        'heading'       => __('Autoplay','bit14'),
+                        'heading'       => __('Autoplay','vc-addons-by-bit14'),
                         'param_name'    => 'is_autoplay',
                         'value'         => '1',                        
                     ),
                     // array(
                     //     'type'          => 'checkbox',
-                    //     'heading'       => __('Loop','bit14'),
+                    //     'heading'       => __('Loop','vc-addons-by-bit14'),
                     //     'param_name'    => 'is_loop',
                     //     'value'         => '1',                        
                     // ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Background Color', 'bit14' ),
+                        'heading'       => __( 'Background Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'background_color',
                         'group'         => 'Style'    
                     ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Audio Title Color', 'bit14' ),
+                        'heading'       => __( 'Audio Title Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'audio_title_color',
                         'group'         => 'Style'    
                     ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Artist Name Color', 'bit14' ),
+                        'heading'       => __( 'Artist Name Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'artist_name_color',
                         'group'         => 'Style'    
                     ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Timer Color', 'bit14' ),
+                        'heading'       => __( 'Timer Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'timer_color',
                         'group'         => 'Style'    
                     ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Control Button Color', 'bit14' ),
+                        'heading'       => __( 'Control Button Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'control_button_color',
                         'group'         => 'Style'    
                     ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Slider Color', 'bit14' ),
+                        'heading'       => __( 'Slider Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'slider_color',
                         'group'         => 'Style'
                     ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Control Button Background Color', 'bit14' ),
+                        'heading'       => __( 'Control Button Background Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'control_bg_button_color',
                         'group'         => 'Style',
                         'dependency'    => array(
@@ -199,23 +203,23 @@ class PBWB_Audio_Player extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Element ID', 'bit14' ),
+                        'heading'       => __( 'Element ID', 'vc-addons-by-bit14' ),
                         'param_name'    => 'id',
-                        'description'   => __( 'Element ID', 'bit14' ),
+                        'description'   => __( 'Element ID', 'vc-addons-by-bit14' ),
                         'group'         => 'Attributes'
                     ),
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Extra Class Name', 'bit14' ),
+                        'heading'       => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'param_name'    => 'class',
-                        'description'   => __( 'Extra Class Name', 'bit14' ),
+                        'description'   => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'group'         => 'Attributes'
                     ),
                     $google_fonts,
                     array(
                         "type"          => "vc_links",
                         "param_name"    => "bit_caption_url",
-                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;text-decoration: none;">Get the Pro version for more elements and customization options.</a></span>', 'ihover' ),
+                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;text-decoration: none;">Get the Pro version for more elements and customization options.</a></span>', 'vc-addons-by-bit14' ),
                     ),
                 ),
             )

@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class PBWB_Animatedtext extends WPBakeryShortCode {
 	
 	function __construct(){
@@ -25,7 +29,7 @@ class PBWB_Animatedtext extends WPBakeryShortCode {
         $google_fonts           = array(
             "type"          => "vc_links",
             "param_name"    => "bit_caption_url",
-            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'bit14' ),
+            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'vc-addons-by-bit14' ),
         );
 
         if($enable_googlefonts == "1"){
@@ -34,8 +38,8 @@ class PBWB_Animatedtext extends WPBakeryShortCode {
                 'param_name' => 'google_text_font',
                 'settings' => array(
                     'fields' => array(
-                        'font_family_description' => __( 'Select Font Family.', 'bit14' ),
-                        'font_style_description' => __( 'Select Font Style.', 'bit14' ),
+                        'font_family_description' => __( 'Select Font Family.', 'vc-addons-by-bit14' ),
+                        'font_style_description' => __( 'Select Font Style.', 'vc-addons-by-bit14' ),
                     ),
                 ), 
                 'weight' => 0,
@@ -46,25 +50,25 @@ class PBWB_Animatedtext extends WPBakeryShortCode {
         // Map the block with vc_map()
         vc_map( 
             array(
-                'name'          => __('Simple Animated Text', 'bit14'),
-                'description'          => __('Create eye-catching animated text to keep your audience engaged.', 'bit14'),
+                'name'          => __('Simple Animated Text', 'vc-addons-by-bit14'),
+                'description'          => __('Create eye-catching animated text to keep your audience engaged.', 'vc-addons-by-bit14'),
                 'base'          => 'bit_animatedtext',
-                'category'      => __('PB Addons', 'bit14'),
+                'category'      => __('PB Addons', 'vc-addons-by-bit14'),
                 'icon'          => plugin_dir_url(__DIR__) . 'assets/images/animated-text.png',
                 'params'        => array(
                     array(
                         'type'          => 'textarea',
-                        'heading'       => __('Text','bit14'),
+                        'heading'       => __('Text','vc-addons-by-bit14'),
                         'param_name'    => 'text',
                     ),
                     array(
                         'type'          =>  'colorpicker',
-                        'heading'       =>  __( 'Text Color', 'bit14' ),
+                        'heading'       =>  __( 'Text Color', 'vc-addons-by-bit14' ),
                         'param_name'    =>  'text_color',
                     ),
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Animations', 'bit14' ),
+                        'heading'       => __( 'Animations', 'vc-addons-by-bit14' ),
                         'param_name'    => 'animations',
                         'value'         => array(
                             'Bounce'        => 'bounce',
@@ -81,24 +85,24 @@ class PBWB_Animatedtext extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Element ID', 'bit14' ),
+                        'heading'       => __( 'Element ID', 'vc-addons-by-bit14' ),
                         'param_name'    => 'id',
-                        'description'   => __( 'Element ID', 'bit14' ),
+                        'description'   => __( 'Element ID', 'vc-addons-by-bit14' ),
                         'group'         => 'Attributes'
                     ),
 
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Extra Class Name', 'bit14' ),
+                        'heading'       => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'param_name'    => 'class',
-                        'description'   => __( 'Extra Class Name', 'bit14' ),
+                        'description'   => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'group'         => 'Attributes'
                     ),
                     $google_fonts,     
                     array(
                         "type"          => "vc_links",
                         "param_name"    => "bit_caption_url",
-                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;">Get the Pro version for more elements and customization options.</a></span>', 'bit14' ),
+                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;">Get the Pro version for more elements and customization options.</a></span>', 'vc-addons-by-bit14' ),
                     ), 
                 ),
             )

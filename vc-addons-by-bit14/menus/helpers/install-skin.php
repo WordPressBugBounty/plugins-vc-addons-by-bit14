@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 //var_dump(plugin_dir_path( __FILE__ ).'PluginSilentUpgraderSkin.php');die;
 require_once(plugin_dir_path( __FILE__ ).'PluginSilentUpgraderSkin.php');
 

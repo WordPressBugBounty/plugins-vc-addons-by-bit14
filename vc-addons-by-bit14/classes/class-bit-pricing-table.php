@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class WPBakeryShortCode_bit14_pricing_tables extends WPBakeryShortCodesContainer {
 
     protected function content($atts, $content = null){
@@ -32,11 +36,11 @@ class WPBakeryShortCode_bit14_pricing_tables extends WPBakeryShortCodesContainer
   // Map the block with vc_map()
   vc_map(
     array(
-        "name"                      =>   __( 'Pricing Tables', 'bit14' ),
-        "description"               =>   __( 'Present your pricing plans in a comprehensive layout', 'bit14' ),
+        "name"                      =>   __( 'Pricing Tables', 'vc-addons-by-bit14' ),
+        "description"               =>   __( 'Present your pricing plans in a comprehensive layout', 'vc-addons-by-bit14' ),
         "base"                      =>  "Bit14_Pricing_Tables",
         "class"                     =>  "Bit14_Pricing_Tables",
-        "category"                  => __('PB Addons', 'bit14'),
+        "category"                  => __('PB Addons', 'vc-addons-by-bit14'),
         "as_parent"                 =>  array('only' => 'Bit_Pricing_Table'),
         "content_element"           =>  true,
         "is_container"              =>  true,
@@ -47,41 +51,41 @@ class WPBakeryShortCode_bit14_pricing_tables extends WPBakeryShortCodesContainer
             array(
                 'type'          => 'vc_links',
                 'param_name'    => 'notice_1',
-                'description'   => __( "For more themes and advance options, check <a href='https://pagebuilderaddons.com/pricing-table-advance/'> Pricing Table (Advance)</a>", 'bit14' ),
+                'description'   => __( "For more themes and advance options, check <a href='https://pagebuilderaddons.com/pricing-table-advance/'> Pricing Table (Advance)</a>", 'vc-addons-by-bit14' ),
             ),
             array(
                 'type'          =>  'textfield',
-                'heading'       =>  __( 'Element ID', 'bit14' ),
+                'heading'       =>  __( 'Element ID', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'id',
-                'description'   =>  __( 'Element ID', 'bit14' ),
+                'description'   =>  __( 'Element ID', 'vc-addons-by-bit14' ),
             ),
 
             array(
                 'type'          =>  'textfield',
-                'heading'       =>  __( 'Extra Class Name', 'bit14' ),
+                'heading'       =>  __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'class',
-                'description'   =>  __( 'Extra Class Name', 'bit14' ),
+                'description'   =>  __( 'Extra Class Name', 'vc-addons-by-bit14' ),
             ),
 
             array(
                 'type'          =>  'colorpicker',
-                'heading'       =>  __( 'Primary Color', 'bit14' ),
+                'heading'       =>  __( 'Primary Color', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'primary_color',
                 'value'         =>  '#7f7f7f'
             ),
 
             array(
                 'type'          =>  'colorpicker',
-                'heading'       =>  __( 'Alternate Color', 'bit14' ),
+                'heading'       =>  __( 'Alternate Color', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'alternate_color',
                 'value'         =>  '#ffffff'
             ),
 
             array(
                 'type'          =>  'dropdown',
-                'heading'       =>  __( 'Theme', 'bit14' ),
+                'heading'       =>  __( 'Theme', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'theme',
-                'description'   =>  __( 'Theme style for your table', 'bit14' ),
+                'description'   =>  __( 'Theme style for your table', 'vc-addons-by-bit14' ),
                 'value'         =>  array(
                     'Theme One'     =>  'theme-one',
                     'Theme Two'     =>  'theme-two',
@@ -91,9 +95,9 @@ class WPBakeryShortCode_bit14_pricing_tables extends WPBakeryShortCodesContainer
 
             array(
                 'type'          =>  'dropdown',
-                'heading'       =>  __( 'Tables in a row', 'bit14' ),
+                'heading'       =>  __( 'Tables in a row', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'columns',
-                'description'   =>  __( 'Number of tables in a row', 'bit14' ),
+                'description'   =>  __( 'Number of tables in a row', 'vc-addons-by-bit14' ),
                 'dependency'    =>  array(
                     'element'       =>  'theme',
                     'value'         =>  array( 'theme-one' , 'theme-two' )
@@ -108,12 +112,12 @@ class WPBakeryShortCode_bit14_pricing_tables extends WPBakeryShortCodesContainer
             array(
                 'type'          => 'vc_links',
                 'param_name'    => 'notice_2',
-                'description'   => __( "For more themes and advance options, check <a href='https://pagebuilderaddons.com/pricing-table-advance/'> Pricing Table (Advance)</a>", 'bit14' ),
+                'description'   => __( "For more themes and advance options, check <a href='https://pagebuilderaddons.com/pricing-table-advance/'> Pricing Table (Advance)</a>", 'vc-addons-by-bit14' ),
             ),
             array(
                 "type"          => "vc_links",
                 "param_name"    => "bit_caption_url",
-                "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;">Get the Pro version for more elements and customization options.</a></span>', 'bit14' ),
+                "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;">Get the Pro version for more elements and customization options.</a></span>', 'vc-addons-by-bit14' ),
             ), 
         ),
     )

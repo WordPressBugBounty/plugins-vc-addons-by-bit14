@@ -1,11 +1,11 @@
 ﻿=== Web and WooCommerce Addons for WPBakery Builder ===
 
 Contributors: pagebuilderaddons, genetechproducts
-Tags: addons for wpbakery page builder, wpbakery addons, web addons, woocommerce addons, wpbakery page builder, wpbakery page templates, website addons for wpbakery
+Tags: woocommerce, wpbakery addons, wpbakery, visual composer, page builder, addons
 Requires at least: 4.0
-Tested up to: 6.8
+Tested up to: 7.1
 Requires PHP: 7.0
-Stable tag: 1.5
+Stable tag: 1.6
 License: GPLv2 or later
 
 Clean, responsive, well designed addons for WPBakery Page Builder with custom post type
@@ -278,6 +278,18 @@ Watch Live demo here: [https://pagebuilderaddons.com/](https://pagebuilderaddons
 Support forum: [https://wordpress.org/support/plugin/vc-addons-by-bit14/](https://wordpress.org/support/plugin/vc-addons-by-bit14/)
 Contact Us: [https://pagebuilderaddons.com/contact-us/](https://pagebuilderaddons.com/contact-us/)
 
+**What's Next?**
+
+Liked PB Addons for WPBakery? Do check out our other projects.
+
+Once your page builder is in place, make sure the rest of your website stays in top shape with WP Site Checker.
+Run comprehensive checks for performance, security, SEO, broken links, accessibility, SSL, page speed, and more — all from a single WordPress plugin.
+Learn more: [**WP Site Checker**](https://wpsitechecker.com/?utm_source=pieregister&utm_medium=repo&utm_campaign=detailtab)
+
+[**Pie Register**](https://pieregister.com/): Pie Register is a User Registration plugin to help you create custom Login and Registration forms in minutes, with no coding skills required. You can customize the registration process and build advanced registration flows using the various form fields. The plugin also comes with additional security features to keep your website spam-free.
+
+[**Pie Forms**](https://pieforms.com/?utm_source=pieregister&utm_medium=repo&utm_campaign=detailtab): Pie Forms is your custom Drag and Drop Form Builder with a user-friendly interface, built-in ready-to-use templates, and various Form Field options to create advanced forms without a single line of code. Apart from simple registration, it lets you create all forms, including contact forms, surveys, job applications, appointments, and more.
+
 == Installation ==
 
 1. Make sure WPBakery Page Builder is already installed
@@ -311,6 +323,14 @@ Open Visual Composer Editor -> click on add element -> click on tab PB Addons. c
 14. Business Hours
 
 == Changelog ==
+
+= 1.6 =
+- Fixed: Text domain mismatch across all PHP files (updated to vc-addons-by-bit14).
+- Fixed: Bundled external CDN resources (Font Awesome, jQuery UI CSS) locally.
+- Fixed: Removed bundled WordPress core files (jquery-ui.js).
+- Added: License header in plugin main file.
+- Added: Direct access prevention (ABSPATH checks) to all PHP files.
+- Updated: Tested up to WordPress 7.1.
 
 = 1.5 =
 - Updated: Compatible with WordPress version 6.81.4.

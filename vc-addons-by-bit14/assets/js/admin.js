@@ -14,15 +14,22 @@ if (typeof (jQuery) != 'undefined') {
 
         pb_addons(document).ready(function($) {
                 
-            // Toggle an addon state.
-            $( document ).on( 'click', '.aboutus-page-admin .sib-product button', function( event ) {
+            // Toggle an addon state.            $( document ).on( 'click', '.aboutus-page-admin .sib-product button', function( event ) {
         
                 event.preventDefault();
-        
+
                 if ( $( this ).hasClass( 'disabled' ) ) {
                     return false;
                 }
-        
+
+                if ( $( this ).hasClass( 'status-go-to-url' ) ) {
+                    var url = $( this ).attr( 'data-url' );
+                    if ( url ) {
+                        window.open( url, '_blank' );
+                    }
+                    return false;
+                }
+
                 addonToggle( $( this ) );
             } );
             

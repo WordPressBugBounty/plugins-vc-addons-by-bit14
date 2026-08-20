@@ -219,7 +219,7 @@ $enable_googlefonts     = get_option( 'bit14_enable_googlefonts' , '1');
 $google_fonts           = array(
     "type"          => "vc_links",
     "param_name"    => "bit_caption_url",
-    "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'bit14' ),
+    "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'vc-addons-by-bit14' ),
 );
 
 if($enable_googlefonts == "1"){
@@ -228,8 +228,8 @@ if($enable_googlefonts == "1"){
         'param_name' => 'google_text_font',
         'settings' => array(
             'fields' => array(
-                'font_family_description' => __( 'Select Font Family.', 'bit14' ),
-                'font_style_description' => __( 'Select Font Style.', 'bit14' ),
+                'font_family_description' => __( 'Select Font Family.', 'vc-addons-by-bit14' ),
+                'font_style_description' => __( 'Select Font Style.', 'vc-addons-by-bit14' ),
             ),
         ), 
         'weight' => 0,
@@ -239,89 +239,89 @@ if($enable_googlefonts == "1"){
 // Map the block with vc_map()
 vc_map(
     array(
-        "name"                      =>  __( 'Pricing Table', 'bit14' ),
-        "description"               =>  __( 'Present your pricing plans in a comprehensive layout', 'bit14' ),
+        "name"                      =>  __( 'Pricing Table', 'vc-addons-by-bit14' ),
+        "description"               =>  __( 'Present your pricing plans in a comprehensive layout', 'vc-addons-by-bit14' ),
         "base"                      =>  "Bit_Pricing_Table",
         "class"                     =>  "Bit_Pricing_Table",
         "as_child"                  =>  array('only' => 'Bit14_Pricing_Tables'),
         "content_element"           =>  true,
-        'category'                  => __('PB Addons', 'bit14'),
+        'category'                  => __('PB Addons', 'vc-addons-by-bit14'),
         'icon'                      =>  'icon-bit-table',
         "show_settings_on_create"   =>  true,
         "params"                    =>  array(
             array(
                 'type'          => 'vc_links',
                 'param_name'    => 'notice',
-                'description'   => __( "For more themes and advance options, check <a href='https://pagebuilderaddons.com/pricing-table-advance/'> Pricing Table (Advance)</a>", 'bit14' ),
+                'description'   => __( "For more themes and advance options, check <a href='https://pagebuilderaddons.com/pricing-table-advance/'> Pricing Table (Advance)</a>", 'vc-addons-by-bit14' ),
             ),
             array(
                 'type'          =>  'textfield',
-                'heading'       =>  __( 'Table ID', 'bit14' ),
+                'heading'       =>  __( 'Table ID', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'id',
-                'description'   =>  __( 'Table Specific ID', 'bit14' ),
+                'description'   =>  __( 'Table Specific ID', 'vc-addons-by-bit14' ),
             ),
 
             array(
                 'type'          =>  'textfield',
-                'heading'       =>  __( 'Table Class Name', 'bit14' ),
+                'heading'       =>  __( 'Table Class Name', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'class',
-                'description'   =>  __( 'Extra Class Name', 'bit14' ),
+                'description'   =>  __( 'Extra Class Name', 'vc-addons-by-bit14' ),
             ),
 
             array(
                 'type'          =>  'textfield',
-                'heading'       =>  __( 'Title', 'bit14' ),
+                'heading'       =>  __( 'Title', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'table_title',
-                'description'   =>  __( 'Title of the table', 'bit14' ),
+                'description'   =>  __( 'Title of the table', 'vc-addons-by-bit14' ),
             ),
 
             array(
                 'type'          =>  'checkbox',
-                'heading'       =>  __( 'Featured', 'bit14' ),
+                'heading'       =>  __( 'Featured', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'is_featured',
-                'description'   =>  __( 'Is this table featured?', 'bit14' ),
+                'description'   =>  __( 'Is this table featured?', 'vc-addons-by-bit14' ),
             ),
 
             array(
                 'type'          =>  'textfield',
-                'heading'       =>  __( 'Currency', 'bit14' ),
+                'heading'       =>  __( 'Currency', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'currency',
-                'description'   =>  __( 'Please enter your currency sign here. Example: "$"', 'bit14' )
+                'description'   =>  __( 'Please enter your currency sign here. Example: "$"', 'vc-addons-by-bit14' )
             ),
 
             array(
                 'type'          =>  'textfield',
-                'heading'       =>  __( 'Price', 'bit14' ),
+                'heading'       =>  __( 'Price', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'price',
-                'description'   =>  __( 'Please enter your amount here. e.g(Free ,  Premium , $14.00)', 'bit14' )
+                'description'   =>  __( 'Please enter your amount here. e.g(Free ,  Premium , $14.00)', 'vc-addons-by-bit14' )
             ),
 
             array(
                 'type'          =>  'textfield',
-                'heading'       =>  __( 'Duration', 'bit14' ),
+                'heading'       =>  __( 'Duration', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'duration',
-                'description'   =>  __( 'Duration of expiry. Example: "Month"', 'bit14' )
+                'description'   =>  __( 'Duration of expiry. Example: "Month"', 'vc-addons-by-bit14' )
             ),
 
             array(
                 'type'          =>  'textfield',
-                'heading'       =>  __( 'Description', 'bit14' ),
+                'heading'       =>  __( 'Description', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'description'
             ),
 
             array(
                 'type'          =>  'textfield',
-                'heading'       =>  __( 'Button Text', 'bit14' ),
+                'heading'       =>  __( 'Button Text', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'button_text',
-                'description'   =>  __( 'Please enter text of button if you want a button at the end of your table.', 'bit14' )
+                'description'   =>  __( 'Please enter text of button if you want a button at the end of your table.', 'vc-addons-by-bit14' )
             ),
 
 
             array(
                 'type'          =>  'textfield',
-                'heading'       =>  __( 'Button Link', 'bit14' ),
+                'heading'       =>  __( 'Button Link', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'button_link',
-                'description'   =>  __( 'Link where button redirects the user.', 'bit14' )
+                'description'   =>  __( 'Link where button redirects the user.', 'vc-addons-by-bit14' )
             ),
 
           $google_fonts,   
@@ -333,19 +333,19 @@ vc_map(
                 'params'        =>  array(
                     array(
                         'type'          =>  'textfield',
-                        'heading'       =>  __( 'Title', 'bit14' ),
+                        'heading'       =>  __( 'Title', 'vc-addons-by-bit14' ),
                         'description'   =>  'Title of your item',
                         'param_name'    =>  'pricing_table_list_title',
                     ),
                     array(
                         'type'          =>  'iconpicker',
-                        'heading'       =>  __( 'Icon', 'bit14' ),
+                        'heading'       =>  __( 'Icon', 'vc-addons-by-bit14' ),
                         'description'   =>  'Icon of the list',
                         'param_name'    =>  'pricing_table_list_icon',
                     ),
                     array(
                         'type'          =>  'textfield',
-                        'heading'       =>  __( 'Content', 'bit14' ),
+                        'heading'       =>  __( 'Content', 'vc-addons-by-bit14' ),
                         'description'   =>  'Content of item if any',
                         'param_name'    =>  'pricing_table_list_content',
                     ),
@@ -354,12 +354,12 @@ vc_map(
             array(
                 'type'          => 'vc_links',
                 'param_name'    => 'notice_two',
-                'description'   => __( "For more themes and advance options, check <a href='https://pagebuilderaddons.com/pricing-table-advance/'> Pricing Table (Advance)</a>", 'bit14' ),
+                'description'   => __( "For more themes and advance options, check <a href='https://pagebuilderaddons.com/pricing-table-advance/'> Pricing Table (Advance)</a>", 'vc-addons-by-bit14' ),
             ),
             array(
                 "type"          => "vc_links",
                 "param_name"    => "bit_caption_url",
-                "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;text-decoration: none;">Get the Pro version for more elements and customization options.</a></span>', 'ihover' ),
+                "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;text-decoration: none;">Get the Pro version for more elements and customization options.</a></span>', 'vc-addons-by-bit14' ),
             ),
         )
     )

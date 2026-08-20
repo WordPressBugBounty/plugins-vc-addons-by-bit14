@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class PBWB_Testimonial_Lists extends WPBakeryShortCode {
     
     function __construct(){
@@ -31,7 +35,7 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
         $google_fonts           = array(
             "type"          => "vc_links",
             "param_name"    => "bit_caption_url",
-            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'bit14' ),
+            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'vc-addons-by-bit14' ),
         );
 
         if($enable_googlefonts == "1"){
@@ -40,8 +44,8 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
                 'param_name' => 'google_text_font',
                 'settings' => array(
                     'fields' => array(
-                        'font_family_description' => __( 'Select Font Family.', 'bit14' ),
-                        'font_style_description' => __( 'Select Font Style.', 'bit14' ),
+                        'font_family_description' => __( 'Select Font Family.', 'vc-addons-by-bit14' ),
+                        'font_style_description' => __( 'Select Font Style.', 'vc-addons-by-bit14' ),
                     ),
                 ), 
                 'weight' => 0,
@@ -51,32 +55,32 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
         // Map the block with vc_map()
         vc_map( 
             array(
-                'name'          => __('Testimonials', 'bit14'),
+                'name'          => __('Testimonials', 'vc-addons-by-bit14'),
                 'base'          => 'testimonial-lists',
-                'description'   => __(' Showcase customer reviews and testimonials', 'bit14'), 
-                'category'      => __('PB Addons', 'bit14'),
+                'description'   => __(' Showcase customer reviews and testimonials', 'vc-addons-by-bit14'), 
+                'category'      => __('PB Addons', 'vc-addons-by-bit14'),
                 'icon'          => plugin_dir_url(__DIR__) . 'assets/images/testimonial-lists.png',           
                 'params'        => array(
 
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Element ID', 'bit14' ),
+                        'heading'       => __( 'Element ID', 'vc-addons-by-bit14' ),
                         'param_name'    => 'id',
-                        'description'   => __( 'Element ID', 'bit14' ),
+                        'description'   => __( 'Element ID', 'vc-addons-by-bit14' ),
                         'group'         => 'General'
                     ),
 
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Extra Class Name', 'bit14' ),
+                        'heading'       => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'param_name'    => 'class',
-                        'description'   => __( 'Extra Class Name', 'bit14' ),
+                        'description'   => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'group'         => 'General'
                     ),
 
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Theme Style', 'bit14' ),
+                        'heading'       => __( 'Theme Style', 'vc-addons-by-bit14' ),
                         'param_name'    => 'theme_style',
                         'group'         => 'General',
                         'value'         => array(
@@ -89,7 +93,7 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Slider', 'bit14' ),
+                        'heading'       => __( 'Slider', 'vc-addons-by-bit14' ),
                         'param_name'    => 'is_slider',
                         'value'         => array('No','Yes'),
                         'group'         => 'General',
@@ -101,7 +105,7 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'checkbox',
-                        'heading'       => __('Prev/Next Arrows?','bit14'),
+                        'heading'       => __('Prev/Next Arrows?','vc-addons-by-bit14'),
                         'param_name'    => 'is_arrows',
                         'value'         => '1',
                         'group'         => 'General',
@@ -110,7 +114,7 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'checkbox',
-                        'heading'       => __( 'Dynamic adaptive height', 'bit14' ),
+                        'heading'       => __( 'Dynamic adaptive height', 'vc-addons-by-bit14' ),
                         'param_name'    => 'adaptive_height',
                         'value'         => '1',
                         'group'         => 'General',
@@ -120,7 +124,7 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'checkbox',
-                        'heading'       => __('Autoplay?','bit14'),
+                        'heading'       => __('Autoplay?','vc-addons-by-bit14'),
                         'param_name'    => 'is_autoplay',
                         'value'         => '1',
                         'group'         => 'General',
@@ -129,7 +133,7 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __('Autoplay Speed?','bit14'),
+                        'heading'       => __('Autoplay Speed?','vc-addons-by-bit14'),
                         'param_name'    => 'autoplay_speed',
                         'value'         => array('500','1000','1500','2000','2500','3000','4000','5000','6000','7000'),
                         'group'         => 'General',
@@ -138,7 +142,7 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'checkbox',
-                        'heading'       => __('Pause on Hover?','bit14'),
+                        'heading'       => __('Pause on Hover?','vc-addons-by-bit14'),
                         'param_name'    => 'is_pause_onhover',
                         'value'         => '1',
                         'group'         => 'General',
@@ -150,8 +154,8 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
                         'param_name' => 'google_text_font',
                         'settings' => array(
                             'fields' => array(
-                                'font_family_description' => __( 'Select Font Family.', 'bit14' ),
-                                'font_style_description' => __( 'Select Font Style.', 'bit14' ),
+                                'font_family_description' => __( 'Select Font Family.', 'vc-addons-by-bit14' ),
+                                'font_style_description' => __( 'Select Font Style.', 'vc-addons-by-bit14' ),
                             ),
                         ), 
                         'weight' => 0,
@@ -160,7 +164,7 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __('Slides in a row','bit14'),
+                        'heading'       => __('Slides in a row','vc-addons-by-bit14'),
                         'param_name'    => 'desktop_num_slides',
                         'value'         => array(1,2,3,4),
                         'group'         => 'Desktop',
@@ -173,7 +177,7 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __('Slides in a row','bit14'),
+                        'heading'       => __('Slides in a row','vc-addons-by-bit14'),
                         'param_name'    => 'tablet_num_slides',
                         'value'         => array(1,2),
                         'group'         => 'Tablet',
@@ -185,50 +189,50 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
 
                     array(
                         'type' => 'param_group',
-                        'heading' => __( 'Testimonial', 'bit14' ),
+                        'heading' => __( 'Testimonial', 'vc-addons-by-bit14' ),
                         'param_name' => 'testimonials',
                         'value' => '',
                         'group' => 'Testimonials',
                         'params' => array(
                             array(
                                 'type' => 'textfield',
-                                'heading' => __( 'Author Name', 'bit14' ),
+                                'heading' => __( 'Author Name', 'vc-addons-by-bit14' ),
                                 'param_name' => 'author_name',
-                                'description' => __( 'Enter Author Name For Testimonial.', 'bit14' ),
+                                'description' => __( 'Enter Author Name For Testimonial.', 'vc-addons-by-bit14' ),
                                 'admin_label' => true,
                                 'value' => '',
                             ),
                             array(
                                 'type' => 'attach_image',
-                                'heading' => __( 'Author Image', 'bit14' ),
+                                'heading' => __( 'Author Image', 'vc-addons-by-bit14' ),
                                 'param_name' => 'author_image',
                             ),
                             array(
                                 'type' => 'textfield',
-                                'heading' => __( 'Author Image Alternate Text', 'bit14' ),
+                                'heading' => __( 'Author Image Alternate Text', 'vc-addons-by-bit14' ),
                                 'param_name' => 'author_image_alt',
                             ),
                             array(
                                 'type' => 'textfield',
-                                'heading' => __( 'Author Position', 'bit14' ),
+                                'heading' => __( 'Author Position', 'vc-addons-by-bit14' ),
                                 'param_name' => 'author_details',
                                 'value' => '',
                             ),
                             array(
                                 'type' => 'textfield',
-                                'heading' => __( 'Author Company', 'bit14' ),
+                                'heading' => __( 'Author Company', 'vc-addons-by-bit14' ),
                                 'param_name' => 'author_company',
                                 'value' => '',
                             ),
                             array(
                                 'type' => 'textfield',
-                                'heading' => __( 'Author URL', 'bit14' ),
+                                'heading' => __( 'Author URL', 'vc-addons-by-bit14' ),
                                 'param_name' => 'author_url',
                                 'value' => '',
                             ),
                             array(
                                 'type' => 'dropdown',
-                                'heading' => __( 'Rating Stars', 'bit14' ),
+                                'heading' => __( 'Rating Stars', 'vc-addons-by-bit14' ),
                                 'param_name' => 'rating_stars',
                                 'value'         => array(
                                     'Please Select' => 'please_select',
@@ -241,9 +245,9 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
                             ),
                             array(
                                 'type' => 'textarea',
-                                'heading' => __( 'Text', 'bit14' ),
+                                'heading' => __( 'Text', 'vc-addons-by-bit14' ),
                                 'param_name' => 'testimonial',
-                                'description' => __( 'What your client/customer has to say.', 'bit14' ),
+                                'description' => __( 'What your client/customer has to say.', 'vc-addons-by-bit14' ),
                             ),
                         ),
                     ), 
@@ -251,7 +255,7 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
                     array(
                         "type"          => "vc_links",
                         "param_name"    => "bit_caption_url",
-                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;">Get the Pro version for more elements and customization options.</a></span>', 'bit14' ),
+                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;">Get the Pro version for more elements and customization options.</a></span>', 'vc-addons-by-bit14' ),
                         'group'         => 'General',
                     ), 
                 ),
@@ -470,9 +474,9 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
                                 if ( $author_position || $author_company || $author_url ){
                                     $output .= '<span class="testimonial-author-details">';
                                     $output .= '<span itemprop="jobTitle" style="'.esc_attr($text_font_inline_style).'">' . esc_html($author_position) . '</span>';
-                                    $output .= ($author_position && ($author_company || $author_url)) ? esc_html__( ', ', 'bit14' ) : ' ' ;
+                                    $output .= ($author_position && ($author_company || $author_url)) ? esc_html__( ', ', 'vc-addons-by-bit14' ) : ' ' ;
                                     $output .= '<span itemprop="worksFor" style="'.esc_attr($text_font_inline_style).'">' . esc_attr($author_company) . '</span>';
-                                    $output .= $author_url ? esc_html__( ', ', 'bit14' ) : ' ' ;
+                                    $output .= $author_url ? esc_html__( ', ', 'vc-addons-by-bit14' ) : ' ' ;
                                     $allowed_html = $this->pbwb_get_allowed_tags();
                                     $output .= wp_kses($author_url, $allowed_html);
                                     $output .= '</span>';
@@ -513,9 +517,9 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
                                 if ( $author_position || $author_company || $author_url ){
                                     $output .= '<span class="testimonial-author-details" style="'.esc_attr($text_font_inline_style).'">';
                                     $output .= '<span itemprop="jobTitle" style="'.esc_attr($text_font_inline_style).'">' . esc_html($author_position) . '</span>';
-                                    $output .= ($author_position && ($author_company || $author_url)) ? esc_html__( ' , ', 'bit14' ) : ' ' ;
+                                    $output .= ($author_position && ($author_company || $author_url)) ? esc_html__( ' , ', 'vc-addons-by-bit14' ) : ' ' ;
                                     $output .= '<span itemprop="worksFor" style="'.esc_attr($text_font_inline_style).'">' . esc_html($author_company) . '</span>';
-                                    $output .= ($author_company && $author_url) ? esc_html__( ' , ', 'bit14' ) : ' ' ;
+                                    $output .= ($author_company && $author_url) ? esc_html__( ' , ', 'vc-addons-by-bit14' ) : ' ' ;
                                     $allowed_html = $this->pbwb_get_allowed_tags();
                                     $output .= wp_kses($author_url, $allowed_html);
                                     $output .= '</span>';
@@ -554,7 +558,7 @@ class PBWB_Testimonial_Lists extends WPBakeryShortCode {
                                         if ( $author_position || $author_company ){
                                             $output .= '<span class="testimonial-author-details" style="'.esc_attr($text_font_inline_style).'">';
                                             $output .= '<span itemprop="jobTitle" style="'.esc_attr($text_font_inline_style).'">' . $author_position . '</span>';
-                                            $output .= ($author_position && ($author_company || $author_url)) ? esc_html__( ' , ', 'bit14' ) : ' ' ;
+                                            $output .= ($author_position && ($author_company || $author_url)) ? esc_html__( ' , ', 'vc-addons-by-bit14' ) : ' ' ;
                                             $output .= '<span itemprop="worksFor" style="'.esc_attr($text_font_inline_style).'">' . esc_html($author_company) . '</span>';
                                             $output .= '</span>';
                                         }

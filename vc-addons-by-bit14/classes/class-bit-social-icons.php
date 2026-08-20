@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class PBWB_Social_Icons extends WPBakeryShortCode {
 function __construct(){
 
@@ -19,15 +23,15 @@ function __construct(){
         // Map the block with vc_map()
         vc_map(
             array(
-                'name'          => __('Social Icons', 'bit14'),
+                'name'          => __('Social Icons', 'vc-addons-by-bit14'),
                 'base'          => 'social_icons',
-                'description'   => __('Display the most popular social media icons beautifully', 'bit14'),
-                'category'      => __('PB Addons', 'bit14'),
+                'description'   => __('Display the most popular social media icons beautifully', 'vc-addons-by-bit14'),
+                'category'      => __('PB Addons', 'vc-addons-by-bit14'),
                 'icon'          => plugin_dir_url(__DIR__) . 'assets/images/social-icon.png',
                 'params'        => array(
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Themes', 'bit14' ),
+                        'heading'       => __( 'Themes', 'vc-addons-by-bit14' ),
                         'param_name'    => 'theme_style',
                         'value'         => array(
                             'Theme One'         => 'social-icons-theme-one',
@@ -39,7 +43,7 @@ function __construct(){
                     ),
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Themes', 'bit14' ),
+                        'heading'       => __( 'Themes', 'vc-addons-by-bit14' ),
                         'param_name'    => 'size',
                         'value'         => array(
                             'Small'         => 'small',
@@ -54,9 +58,9 @@ function __construct(){
                         'params'        =>  array(
                             array(
                                 'type'          => 'dropdown',
-                                'heading'       => __( 'Show Icon', 'bit14' ),
+                                'heading'       => __( 'Show Icon', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'is_icon',
-                                'description'   => __( 'Show/Hide icon.', 'bit14' ),
+                                'description'   => __( 'Show/Hide icon.', 'vc-addons-by-bit14' ),
                                 'value'         => array(
                                     "Font Awesome"      =>  'fontawesome',
                                     "Custom Icon"       =>  'custom'
@@ -64,7 +68,7 @@ function __construct(){
                             ),
                             array(
                                 'type'          => 'iconpicker',
-                                'heading'       => __( 'Icon', 'bit14' ),
+                                'heading'       => __( 'Icon', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'icon',
                                 'value'         => 'vc_pixel_icon vc_pixel_icon-alert',
                                 'settings'      => array(
@@ -75,11 +79,11 @@ function __construct(){
                                     'element'       => 'is_icon',
                                     'value'         => 'fontawesome',
                                 ),
-                                'description'   => __( 'Select icon from library.', 'bit14' ),
+                                'description'   => __( 'Select icon from library.', 'vc-addons-by-bit14' ),
                             ),   
                             array(
                                 'type'          =>  'colorpicker',
-                                'heading'       =>  __( 'Icon Color', 'bit14' ),
+                                'heading'       =>  __( 'Icon Color', 'vc-addons-by-bit14' ),
                                 'param_name'    =>  'icon_color',
                                 'dependency'    => array(
                                     'element'       => 'is_icon',
@@ -88,7 +92,7 @@ function __construct(){
                             ),
                             array(
                                 'type'          =>  'colorpicker',
-                                'heading'       =>  __( 'Icon Background Color', 'bit14' ),
+                                'heading'       =>  __( 'Icon Background Color', 'vc-addons-by-bit14' ),
                                 'param_name'    =>  'icon_background_color',
                                 'dependency'    => array(
                                     'element'       => 'is_icon',
@@ -97,7 +101,7 @@ function __construct(){
                             ),
                             array(
                                 'type'          =>  'attach_image',
-                                'heading'       =>  __( 'Attach Custom Icon', 'bit14' ),
+                                'heading'       =>  __( 'Attach Custom Icon', 'vc-addons-by-bit14' ),
                                 'description'   =>  'Attached icon will be add in the iconic list',
                                 'param_name'    =>  'image',
                                 'dependency'    => array(
@@ -107,7 +111,7 @@ function __construct(){
                             ),
                             array(
                                 'type'          =>  'textfield',
-                                'heading'       =>  __( 'Attachment Alternate Text', 'bit14' ),
+                                'heading'       =>  __( 'Attachment Alternate Text', 'vc-addons-by-bit14' ),
                                 'param_name'    =>  'image_alt',
                                 'dependency'    => array(
                                     'element'       => 'is_icon',
@@ -117,24 +121,24 @@ function __construct(){
                             array(
                                 'type'          =>  'textfield',
                                 'class'         =>  'icon_link',
-                                'heading'       =>  __( 'Icon Link', 'bit14' ),
+                                'heading'       =>  __( 'Icon Link', 'vc-addons-by-bit14' ),
                                 'param_name'    =>  'content_link',
                             ),
                             array(
                                 'type'          =>  'checkbox',
-                                'heading'       =>  __( 'External Link', 'bit14' ),
+                                'heading'       =>  __( 'External Link', 'vc-addons-by-bit14' ),
                                 'param_name'    =>  'external_link',
                                 'value'         =>  '1',
                             ),
                             array(
                                 'type'          =>  'checkbox',
-                                'heading'       =>  __('Icon Tag?','bit14'),
+                                'heading'       =>  __('Icon Tag?','vc-addons-by-bit14'),
                                 'param_name'    =>  'is_icon_tag',
                                 'value'         =>  '1',
                             ),
                             array(
                                 'type'          =>  'textfield',
-                                'heading'       =>  __( 'Tag', 'bit14' ),
+                                'heading'       =>  __( 'Tag', 'vc-addons-by-bit14' ),
                                 'param_name'    =>  'tag_content',
                                 'dependency'    => array(
                                     'element'       => 'is_icon_tag',
@@ -143,7 +147,7 @@ function __construct(){
                             ),
                             array(
                                 'type'          =>  'colorpicker',
-                                'heading'       =>  __( 'Tag Color', 'bit14' ),
+                                'heading'       =>  __( 'Tag Color', 'vc-addons-by-bit14' ),
                                 'param_name'    =>  'tag_color',
                                 'dependency'    => array(
                                     'element'       => 'is_icon_tag',
@@ -152,7 +156,7 @@ function __construct(){
                             ),
                             array(
                                 'type'          =>  'colorpicker',
-                                'heading'       =>  __( 'Tag Background Color', 'bit14' ),
+                                'heading'       =>  __( 'Tag Background Color', 'vc-addons-by-bit14' ),
                                 'param_name'    =>  'tag_background_color',
                                 'dependency'    => array(
                                     'element'       => 'is_icon_tag',
@@ -163,23 +167,23 @@ function __construct(){
                     ),
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Element ID', 'bit14' ),
+                        'heading'       => __( 'Element ID', 'vc-addons-by-bit14' ),
                         'param_name'    => 'id',
-                        'description'   => __( 'Element ID', 'bit14' ),
+                        'description'   => __( 'Element ID', 'vc-addons-by-bit14' ),
                         'group'         =>  'Attributes',
                     ),
 
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Extra Class Name', 'bit14' ),
+                        'heading'       => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'param_name'    => 'class',
-                        'description'   => __( 'Extra Class Name', 'bit14' ),
+                        'description'   => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'group'         =>  'Attributes',
                     ),
                     array(
                         "type"          => "vc_links",
                         "param_name"    => "bit_caption_url",
-                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;text-decoration: none;">Get the Pro version for more elements and customization options.</a></span>', 'ihover' ),
+                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;text-decoration: none;">Get the Pro version for more elements and customization options.</a></span>', 'vc-addons-by-bit14' ),
                     ),
                 ),
             )

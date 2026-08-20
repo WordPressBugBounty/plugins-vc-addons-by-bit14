@@ -1,12 +1,18 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 /*
 Plugin Name: Page Builder Addons for WPBakery
 Description: Page Builder Addons for WPBakery are a pack of premium quality addons
-Version: 1.5
+Version: 1.6
 Author: Page Builder Addons
 Author URI: https://www.pagebuilderaddons.com
-Text Domain: bit14
+Text Domain: vc-addons-by-bit14
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 */
 
 
@@ -104,7 +110,7 @@ function pbwb_rtl_check(){
     if (!current_user_can('manage_options')) {
         wp_send_json(array(
             'status' => 0,
-            'message' => esc_html__( 'Unauthorized access.', 'bit14' )
+            'message' => esc_html__( 'Unauthorized access.', 'vc-addons-by-bit14' )
         ));
     }
     // Run a security check.
@@ -122,7 +128,7 @@ function pbwb_enable_fontawesone_check_pro(){
     if (!current_user_can('manage_options')) {
         wp_send_json(array(
             'status' => 0,
-            'message' => esc_html__( 'Unauthorized access.', 'bit14' )
+            'message' => esc_html__( 'Unauthorized access.', 'vc-addons-by-bit14' )
         ));
     }
     // Run a security check.
@@ -139,7 +145,7 @@ function pbwb_enable_googlefonts_check_pro(){
     if (!current_user_can('manage_options')) {
         wp_send_json(array(
             'status' => 0,
-            'message' => esc_html__( 'Unauthorized access.', 'bit14' )
+            'message' => esc_html__( 'Unauthorized access.', 'vc-addons-by-bit14' )
         ));
     }
     // Run a security check.
@@ -220,8 +226,8 @@ function pbwb_bit14_vc_enqueue_scripts(){
 
     
     if($is_fontawesome == "1" && !empty($is_fontawesome)) {
-        wp_enqueue_style( '', 'https://use.fontawesome.com/releases/v5.11.2/css/all.css' );
-        wp_enqueue_script( '', 'https://use.fontawesome.com/b844aaf4ff.js');        
+        wp_enqueue_style( 'bit14-fontawesome', PBWB_ASSETS_URL.'css/fontawesome5.11.css' );
+        wp_enqueue_script( 'bit14-fontawesome', PBWB_ASSETS_URL.'js/fontawesome.min.js', array(), null, true );        
     } 
  
     if(get_option('bit14_rtl_language') === '1'){
@@ -262,7 +268,7 @@ function pbwb_bit14_vc_admin_enqueue_scripts(){
     // Enqueue jQuery UI
     wp_enqueue_script('jquery-ui-core');
     wp_enqueue_script('jquery-ui-tabs');
-    wp_enqueue_style('jquery-ui-css', 'https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css');
+    wp_enqueue_style('jquery-ui-css', PBWB_ASSETS_URL . 'css/jquery-ui.css');
 
 }
 
@@ -273,7 +279,7 @@ function pbwb_add_action_links_free( $links, $file )
         return $links;
     }
     
-    $links[] = '<a style="color:#13ad11;font-weight:bold" target="_blank" href="https://pagebuilderaddons.com/plan-and-pricing/">'.__("Go Pro","page-builder").'</a>';
+    $links[] = '<a style="color:#13ad11;font-weight:bold" target="_blank" href="https://pagebuilderaddons.com/plan-and-pricing/">'.__("Go Pro","vc-addons-by-bit14").'</a>';
     return $links;
 }
 

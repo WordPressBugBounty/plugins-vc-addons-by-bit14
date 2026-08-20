@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class PBWB_Progress_Bar extends WPBakeryShortCode {
 
 	function __construct(){
@@ -21,7 +25,7 @@ class PBWB_Progress_Bar extends WPBakeryShortCode {
         $google_fonts           = array(
             "type"          => "vc_links",
             "param_name"    => "bit_caption_url",
-            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'bit14' ),
+            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'vc-addons-by-bit14' ),
         );
 
         if($enable_googlefonts == "1"){
@@ -30,8 +34,8 @@ class PBWB_Progress_Bar extends WPBakeryShortCode {
                 'param_name' => 'google_text_font',
                 'settings' => array(
                     'fields' => array(
-                        'font_family_description' => __( 'Select Font Family.', 'bit14' ),
-                        'font_style_description' => __( 'Select Font Style.', 'bit14' ),
+                        'font_family_description' => __( 'Select Font Family.', 'vc-addons-by-bit14' ),
+                        'font_style_description' => __( 'Select Font Style.', 'vc-addons-by-bit14' ),
                     ),
                 ), 
                 'weight' => 0,
@@ -41,30 +45,30 @@ class PBWB_Progress_Bar extends WPBakeryShortCode {
         // Map the block with vc_map()
         vc_map( 
             array(
-                'name' => __('Progress Bar', 'bit14'),
+                'name' => __('Progress Bar', 'vc-addons-by-bit14'),
                 'base' => 'progress-bar',
-                'description' => __('Display statistical information in the form of a stats bar', 'bit14'),
-                'category' => __('PB Addons', 'bit14'),
+                'description' => __('Display statistical information in the form of a stats bar', 'vc-addons-by-bit14'),
+                'category' => __('PB Addons', 'vc-addons-by-bit14'),
                 'icon' => plugin_dir_url(__DIR__) . 'assets/images/progress-bar.png',           
                 'params' => array(
                     array(
                         'type'          =>  'textfield',
                         'class'         =>  'progressbar_id',
-                        'heading'       =>  __( 'ID', 'bit14' ),
+                        'heading'       =>  __( 'ID', 'vc-addons-by-bit14' ),
                         'description'   =>  'ID for your list',
                         'param_name'    =>  'id',
                     ),
                     array(
                         'type'          =>  'textfield',
                         'class'         =>  'progressbar_class',
-                        'heading'       =>  __( 'class', 'bit14' ),
+                        'heading'       =>  __( 'class', 'vc-addons-by-bit14' ),
                         'description'   =>  'Class for your list',
                         'param_name'    =>  'class',
                     ),
                     array(
                         'type'          =>  'dropdown',
                         'class'         =>  'progressbar_quantity',
-                        'heading'       =>  __( 'List item(s) in a row', 'bit14' ),
+                        'heading'       =>  __( 'List item(s) in a row', 'vc-addons-by-bit14' ),
                         'description'   =>  'Number of list item(s) to be displayed in one row',
                         'param_name'    =>  'quantity',
                         'value'         =>  array(
@@ -76,7 +80,7 @@ class PBWB_Progress_Bar extends WPBakeryShortCode {
                     array(
                         'type'          =>  'dropdown',
                         'class'         =>  'progressbar_theme',
-                        'heading'       =>  __( 'List Theme', 'bit14' ),
+                        'heading'       =>  __( 'List Theme', 'vc-addons-by-bit14' ),
                         'description'   =>  'Select the type of progress bar to be displayed',
                         'param_name'    =>  'theme_list',
                         'value'         =>  array(
@@ -95,7 +99,7 @@ class PBWB_Progress_Bar extends WPBakeryShortCode {
                             array(
                                 'type'          =>  'textfield',
                                 'class'         =>  'progressbar_title',
-                                'heading'       =>  __( 'Title', 'bit14' ),
+                                'heading'       =>  __( 'Title', 'vc-addons-by-bit14' ),
                                 'description'   =>  'Title of your list item',
                                 'param_name'    =>  'title',
                                 'admin_label'   => true,
@@ -103,29 +107,29 @@ class PBWB_Progress_Bar extends WPBakeryShortCode {
                             array(
                                 'type'          =>  'textfield',
                                 'class'         =>  'progressbar_counter',
-                                'heading'       =>  __( 'Counter Number', 'bit14' ),
+                                'heading'       =>  __( 'Counter Number', 'vc-addons-by-bit14' ),
                                 'description'   =>  'Use only number no decimal (value numbers should be between 1-100)',
                                 'param_name'    =>  'counter',
                                 'admin_label'   => true,
                             ),
                             array(
                                 'type' => 'colorpicker',
-                                'heading' => __( 'Bar Background Color', 'bit14' ),
+                                'heading' => __( 'Bar Background Color', 'vc-addons-by-bit14' ),
                                 'param_name' => 'bg_color',
-                                'description' => __( 'Color for background.', 'bit14' ),
+                                'description' => __( 'Color for background.', 'vc-addons-by-bit14' ),
                                 'value' => '#ffffff',
                             ),
                             array(
                                 'type'          =>  'textfield',
                                 'class'         =>  'progressbar_id',
-                                'heading'       =>  __( 'ID', 'bit14' ),
+                                'heading'       =>  __( 'ID', 'vc-addons-by-bit14' ),
                                 'description'   =>  'ID for your list item',
                                 'param_name'    =>  'id',
                             ),
                             array(
                                 'type'          =>  'textfield',
                                 'class'         =>  'progressbar_class',
-                                'heading'       =>  __( 'class', 'bit14' ),
+                                'heading'       =>  __( 'class', 'vc-addons-by-bit14' ),
                                 'description'   =>  'Class for your list item',
                                 'param_name'    =>  'class',
                             ),
@@ -136,13 +140,13 @@ class PBWB_Progress_Bar extends WPBakeryShortCode {
                     array(
                         "type"          => "vc_links",
                         "param_name"    => "bit_caption_url",
-                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;">Get the Pro version for more elements and customization options.</a></span>', 'bit14' ),
+                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;">Get the Pro version for more elements and customization options.</a></span>', 'vc-addons-by-bit14' ),
                     ), 
                 )
             )
         );
 
-        vc_map_update( "icon_type" , array(__( 'icomoon', 'js_composer' ) => 'icomoon'));
+        vc_map_update( "icon_type" , array(__( 'icomoon', 'vc-addons-by-bit14' ) => 'icomoon'));
 
 	}
 

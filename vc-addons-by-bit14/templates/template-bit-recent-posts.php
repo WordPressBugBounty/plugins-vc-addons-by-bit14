@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 function pbwb_bit_recent_post_func( $atts ) {
 
     extract(shortcode_atts( array(
@@ -114,8 +118,8 @@ function pbwb_bit_recent_post_func( $atts ) {
     }
 
     if ( $pagination_theme == "post_pagination-style-one" || $pagination_theme == "post_pagination-style-three" ) :
-        $pagination_next_text = esc_html__('&larr; Prev', 'bit14');
-        $pagination_prev_text = esc_html__('Next &rarr;', 'bit14');
+        $pagination_next_text = esc_html__('&larr; Prev', 'vc-addons-by-bit14');
+        $pagination_prev_text = esc_html__('Next &rarr;', 'vc-addons-by-bit14');
     elseif( $pagination_theme == "post_pagination-style-two" ):
         $pagination_next_text   =   '<i class="fa fa-angle-left" aria-hidden="true"></i>';
         $pagination_prev_text   =   '<i class="fa fa-angle-right" aria-hidden="true"></i>';
@@ -203,20 +207,20 @@ function pbwb_bit_recent_post_func( $atts ) {
                             // if( $theme_style == "post-grid-style-one" ) :
                             //     $output .= '<div class="bit-recent-posts-meta">';
                             //         $output .= '<span class="bit-recent-posts-meta-comment" style="'.$text_font_inline_style.'">'. $comment .'</span>';
-                            //         $output .= '<a title="'.__('Read More' , 'bit14').'" href="'. $permalink .'" class="bit-recent-posts-meta-read-more"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>';
+                            //         $output .= '<a title="'.__('Read More' , 'vc-addons-by-bit14').'" href="'. $permalink .'" class="bit-recent-posts-meta-read-more"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>';
                             //     $output .= '</div>';
                             // elseif( $theme_style == "post-grid-style-one" || $theme_style == "post-grid-style-five" ) :
                             //     $output .= '<div class="bit-recent-posts-meta">';
-                            //         $output .= '<span class="bit-recent-posts-author" style="'.$text_font_inline_style.'">'. __('By ' , 'bit14') . $author .'</span>';
+                            //         $output .= '<span class="bit-recent-posts-author" style="'.$text_font_inline_style.'">'. __('By ' , 'vc-addons-by-bit14') . $author .'</span>';
                             //         $output .= '<span class="bit-recent-posts-meta-comment" style="'.$text_font_inline_style.'">'. $comment .'</span>';
                             //     $output .= '</div>';
                             
                             // // READ MORE BUTTON
                             // elseif( $theme_style == "post-grid-style-two" || $theme_style == "post-grid-style-six" ) :
-                            //     $output .= '<a title="'.__('Read More' , 'bit14').'" href="'. $permalink .'" class="btn btn-flat bit-recent-posts-meta-read-more-button" style="'.$text_font_inline_style.'">'.__('Read More' , 'bit14').'</a>';
+                            //     $output .= '<a title="'.__('Read More' , 'vc-addons-by-bit14').'" href="'. $permalink .'" class="btn btn-flat bit-recent-posts-meta-read-more-button" style="'.$text_font_inline_style.'">'.__('Read More' , 'vc-addons-by-bit14').'</a>';
                             // elseif( $theme_style == "post-grid-style-four" ) :
                                 // endif;
-                            $output .= '<a title="'.__('View' , 'bit14').'" href="'. $permalink .'" class="btn btn-flat bit-recent-posts-meta-read-more-button" style="'.esc_attr($text_font_inline_style).'"><span>'.__('View' , 'bit14').'</span></a>';
+                            $output .= '<a title="'.__('View' , 'vc-addons-by-bit14').'" href="'. $permalink .'" class="btn btn-flat bit-recent-posts-meta-read-more-button" style="'.esc_attr($text_font_inline_style).'"><span>'.__('View' , 'vc-addons-by-bit14').'</span></a>';
 
                         $output .= '</div>';
                     $output .= '</div>';

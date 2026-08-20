@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class PBWB_PieRegister extends WPBakeryShortCode {
     function __construct(){
 
@@ -15,7 +19,7 @@ class PBWB_PieRegister extends WPBakeryShortCode {
 
         foreach ( $param['value'] as $val => $text_val ) {
 
-                // $text_val = __($text_val, "js_composer");
+                // $text_val = __($text_val, "vc-addons-by-bit14");
                 $selected = '';
 
                 if(!is_array($value)) {
@@ -56,20 +60,20 @@ class PBWB_PieRegister extends WPBakeryShortCode {
         // Map the block with vc_map()
         vc_map(
             array(
-                'name'          => __('Pie Register', 'bit14'),
+                'name'          => __('Pie Register', 'vc-addons-by-bit14'),
                 'base'          => 'pieregister',
-                'description'   => __('Custom Registration Form Plugin for your WordPress Website', 'bit14'),
-                'category'      => __('PB Addons', 'bit14'),
+                'description'   => __('Custom Registration Form Plugin for your WordPress Website', 'vc-addons-by-bit14'),
+                'category'      => __('PB Addons', 'vc-addons-by-bit14'),
                 'icon'          => plugin_dir_url(__DIR__) . 'assets/images/pie-register-element.png',
                 'params'        => array(
                     array(
                         "type"          => "vc_links",
                         "param_name"    => "bit_caption_url",
-                        "description"   => __( '<span style="text-decoration: none;font-style: normal;">To use this element, the <a href="https://wordpress.org/plugins/pie-forms-for-wp/" target="_blank">Pie Register plugin</a> must be installed and activated on your WordPress website.</span>', 'bit14' ),
+                        "description"   => __( '<span style="text-decoration: none;font-style: normal;">To use this element, the <a href="https://wordpress.org/plugins/pie-forms-for-wp/" target="_blank">Pie Register plugin</a> must be installed and activated on your WordPress website.</span>', 'vc-addons-by-bit14' ),
                     ),
                     array(
                         "type"          => "search_select",
-                        "heading"       => esc_html__("Forms", 'pb-woocommerce'),
+                        "heading"       => esc_html__("Forms", 'vc-addons-by-bit14'),
                         "param_name"    => "form_id",
                         "value"         =>  $forms_id,
                     ),

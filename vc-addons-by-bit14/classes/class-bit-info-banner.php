@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class PBWB_Info_Banner extends WPBakeryShortCode {
     function __construct(){
        // add_action( 'admin_init', array( $this, 'pbwb_mapping' ) );
@@ -17,7 +21,7 @@ class PBWB_Info_Banner extends WPBakeryShortCode {
         $google_fonts           = array(
             "type"          => "vc_links",
             "param_name"    => "bit_caption_url",
-            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'bit14' ),
+            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'vc-addons-by-bit14' ),
         );
 
         if($enable_googlefonts == "1"){
@@ -26,8 +30,8 @@ class PBWB_Info_Banner extends WPBakeryShortCode {
                 'param_name' => 'google_text_font',
                 'settings' => array(
                     'fields' => array(
-                        'font_family_description' => __( 'Select Font Family.', 'bit14' ),
-                        'font_style_description' => __( 'Select Font Style.', 'bit14' ),
+                        'font_family_description' => __( 'Select Font Family.', 'vc-addons-by-bit14' ),
+                        'font_style_description' => __( 'Select Font Style.', 'vc-addons-by-bit14' ),
                     ),
                 ), 
                 'weight' => 0,
@@ -37,32 +41,32 @@ class PBWB_Info_Banner extends WPBakeryShortCode {
         // Map the block with vc_map()
         vc_map(
             array(
-                'name'          => __('Info Banner', 'bit14'),
+                'name'          => __('Info Banner', 'vc-addons-by-bit14'),
                 'base'          => 'info_banner',
-                'description'   => __('Add the key message or your slogan using the info banner', 'bit14'),
-                'category'      => __('PB Addons', 'bit14'),
+                'description'   => __('Add the key message or your slogan using the info banner', 'vc-addons-by-bit14'),
+                'category'      => __('PB Addons', 'vc-addons-by-bit14'),
                 'icon'          => plugin_dir_url(__DIR__) . 'assets/images/info-banner.png',
                 'params'        => array(
 
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Element ID', 'bit14' ),
+                        'heading'       => __( 'Element ID', 'vc-addons-by-bit14' ),
                         'param_name'    => 'id',
-                        'description'   => __( 'Element ID', 'bit14' ),
+                        'description'   => __( 'Element ID', 'vc-addons-by-bit14' ),
                     ),
 
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Extra Class Name', 'bit14' ),
+                        'heading'       => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'param_name'    => 'class',
-                        'description'   => __( 'Extra Class Name', 'bit14' ),
+                        'description'   => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                     ),
 
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'List item(s) in a row', 'bit14' ),
+                        'heading'       => __( 'List item(s) in a row', 'vc-addons-by-bit14' ),
                         'param_name'    => 'cols',
-                        'description'   => __( 'Number of list item(s) to be displayed in one row', 'bit14' ),
+                        'description'   => __( 'Number of list item(s) to be displayed in one row', 'vc-addons-by-bit14' ),
                         'value'         => array(
                             "One"     =>  'one',
                             "Two"     =>  'two',
@@ -72,32 +76,32 @@ class PBWB_Info_Banner extends WPBakeryShortCode {
 
                      array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Text Color', 'bit14' ),
+                        'heading'       => __( 'Text Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'txt_color',
-                        'description'   => __( 'Select Text color for all', 'bit14' ),
+                        'description'   => __( 'Select Text color for all', 'vc-addons-by-bit14' ),
                         
                     ),
 
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Button Background Hover Color', 'bit14' ),
+                        'heading'       => __( 'Button Background Hover Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'btn_bg_color',
-                        'description'   => __( 'Select Button Background color', 'bit14' ),
+                        'description'   => __( 'Select Button Background color', 'vc-addons-by-bit14' ),
                         
                     ),
                      array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Button Text Color', 'bit14' ),
+                        'heading'       => __( 'Button Text Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'btn_text_color',
-                        'description'   => __( 'Select text color for button', 'bit14' ),
+                        'description'   => __( 'Select text color for button', 'vc-addons-by-bit14' ),
                         
                     ),
 
                      array(
                         'type'          => 'checkbox',
-                        'heading'       => __( 'Hover Box', 'bit14' ),
+                        'heading'       => __( 'Hover Box', 'vc-addons-by-bit14' ),
                         'param_name'    => 'is_hover',
-                        'description'   => __( 'Select checkbox for hover', 'bit14' ),
+                        'description'   => __( 'Select checkbox for hover', 'vc-addons-by-bit14' ),
                         'value'         =>  '1',
                         'dependency'    => array(
                                 'element'       => 'cols',
@@ -110,8 +114,8 @@ class PBWB_Info_Banner extends WPBakeryShortCode {
                         'param_name' => 'google_text_font',
                         'settings' => array(
                             'fields' => array(
-                                'font_family_description' => __( 'Select Font Family.', 'bit14' ),
-                                'font_style_description' => __( 'Select Font Style.', 'bit14' ),
+                                'font_family_description' => __( 'Select Font Family.', 'vc-addons-by-bit14' ),
+                                'font_style_description' => __( 'Select Font Style.', 'vc-addons-by-bit14' ),
                             ),
                         ), 
                         'weight' => 0,
@@ -120,33 +124,33 @@ class PBWB_Info_Banner extends WPBakeryShortCode {
                     array(
                         'type'          => 'param_group',
                         'param_name'    => 'info-banner',
-                        'description'   => __( 'Enter details for info banners', 'bit14' ),
+                        'description'   => __( 'Enter details for info banners', 'vc-addons-by-bit14' ),
                         'value'         => '',
                         'params'        => array(
 
                             array(
                                 'type'          =>  'attach_image',
-                                'heading'       =>  __( 'Attach Image', 'bit14' ),
+                                'heading'       =>  __( 'Attach Image', 'vc-addons-by-bit14' ),
                                 'description'   =>  'Attached Image will be added to the banner',
                                 'param_name'    =>  'image',
                             ),
                             array(
                                 'type'          => 'textfield',
-                                'heading'       => __( 'Title', 'bit14' ),
+                                'heading'       => __( 'Title', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'title',
-                                'description'   => __( 'Enter Title For Banner.', 'bit14' ),
+                                'description'   => __( 'Enter Title For Banner.', 'vc-addons-by-bit14' ),
                                 'admin_label'   => true,
                                 
                             ),
                             array(
                                 "type"          => "textarea",
                                 "class"         => "",
-                                "heading"       => __( "Content", "Bit14" ),
+                                "heading"       => __( "Content", "vc-addons-by-bit14" ),
                                 "param_name"    => "content",
                                
                             ),
                             array(
-                                'heading'       => __('Button','bit14'),
+                                'heading'       => __('Button','vc-addons-by-bit14'),
                                 'param_name'    => 'btn',
                                 'group'         => 'General',
                                 'type'          => 'dropdown',
@@ -157,18 +161,18 @@ class PBWB_Info_Banner extends WPBakeryShortCode {
                             ),
                             array(
                                 'type'          => 'textfield',
-                                'heading'       => __( 'Button Text', 'bit14' ),
+                                'heading'       => __( 'Button Text', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'btn_txt',
-                                'description'   => __( 'Enter Text For Button.', 'bit14' ),
+                                'description'   => __( 'Enter Text For Button.', 'vc-addons-by-bit14' ),
                                 'admin_label'   => true,
                                 'value'         => '',
                                 'dependency'    => array('element' => 'btn','value'=>'Yes'),
                             ),
                             array(
                                 'type'          => 'textfield',
-                                'heading'       => __( 'Button Link', 'bit14' ),
+                                'heading'       => __( 'Button Link', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'btn_link',
-                                'description'   => __( 'Enter Link For Button.', 'bit14' ),
+                                'description'   => __( 'Enter Link For Button.', 'vc-addons-by-bit14' ),
                                 'admin_label'   => true,
                                 'value'         => '',
                                 'dependency'    => array('element' => 'btn','value'=>'Yes'),
@@ -180,7 +184,7 @@ class PBWB_Info_Banner extends WPBakeryShortCode {
                     array(
                         "type"          => "vc_links",
                         "param_name"    => "bit_caption_url",
-                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;">Get the Pro version for more elements and customization options.</a></span>', 'bit14' ),
+                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;">Get the Pro version for more elements and customization options.</a></span>', 'vc-addons-by-bit14' ),
                     ),  
                 ),
             )

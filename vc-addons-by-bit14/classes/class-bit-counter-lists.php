@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class PBWB_Counter_Lists extends WPBakeryShortCode {
     function __construct(){
 
@@ -20,7 +24,7 @@ class PBWB_Counter_Lists extends WPBakeryShortCode {
         $google_fonts           = array(
             "type"          => "vc_links",
             "param_name"    => "bit_caption_url",
-            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'bit14' ),
+            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'vc-addons-by-bit14' ),
         );
 
         if($enable_googlefonts == "1"){
@@ -29,8 +33,8 @@ class PBWB_Counter_Lists extends WPBakeryShortCode {
                 'param_name' => 'google_text_font',
                 'settings' => array(
                     'fields' => array(
-                        'font_family_description' => __( 'Select Font Family.', 'bit14' ),
-                        'font_style_description' => __( 'Select Font Style.', 'bit14' ),
+                        'font_family_description' => __( 'Select Font Family.', 'vc-addons-by-bit14' ),
+                        'font_style_description' => __( 'Select Font Style.', 'vc-addons-by-bit14' ),
                     ),
                 ), 
                 'weight' => 0,
@@ -40,25 +44,25 @@ class PBWB_Counter_Lists extends WPBakeryShortCode {
         // Map the block with vc_map()
         vc_map(
             array(
-                'name'          => __('Counters', 'bit14'),
+                'name'          => __('Counters', 'vc-addons-by-bit14'),
                 'base'          => 'counter-lists',
-                'description'   => __('Add animated statistic counters to display numbers', 'bit14'),
-                'category'      => __('PB Addons', 'bit14'),
+                'description'   => __('Add animated statistic counters to display numbers', 'vc-addons-by-bit14'),
+                'category'      => __('PB Addons', 'vc-addons-by-bit14'),
                 'icon'          => plugin_dir_url(__DIR__) . 'assets/images/counter.png',
                 'params'        => array(
 
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Extra Class Name', 'bit14' ),
+                        'heading'       => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'param_name'    => 'class',
-                        'description'   => __( 'Extra Class Name', 'bit14' ),
+                        'description'   => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                     ),
 
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Counter type', 'bit14' ),
+                        'heading'       => __( 'Counter type', 'vc-addons-by-bit14' ),
                         'param_name'    => 'countertype',
-                        'description'   => __( 'Select counter type.(if "progress meter" selected, numbers should be between 1-100)', 'bit14' ),
+                        'description'   => __( 'Select counter type.(if "progress meter" selected, numbers should be between 1-100)', 'vc-addons-by-bit14' ),
                         'value'         => array(
                             "Numbers"           =>  'numbers',
                             "Progress Meter"    =>  'progress'
@@ -66,7 +70,7 @@ class PBWB_Counter_Lists extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Percentage', 'bit14' ),
+                        'heading'       => __( 'Percentage', 'vc-addons-by-bit14' ),
                         'param_name'    => 'is_percentage',
                         'value'         => array(
                             "Yes"         =>  'yes',
@@ -75,7 +79,7 @@ class PBWB_Counter_Lists extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Themes for Counter', 'bit14' ),
+                        'heading'       => __( 'Themes for Counter', 'vc-addons-by-bit14' ),
                         'param_name'    => 'theme',
                         'value'         => array(
                             "Theme 1"           =>  'theme-1',
@@ -89,7 +93,7 @@ class PBWB_Counter_Lists extends WPBakeryShortCode {
                     ),
                     array(
                         'type'              =>  'checkbox',
-                        'heading'           =>  __('Circle Border In Icon?','bit14'),
+                        'heading'           =>  __('Circle Border In Icon?','vc-addons-by-bit14'),
                         'param_name'        =>  'is_circle',
                         'value'             =>  '1',
                         'dependency'        =>  array(
@@ -100,7 +104,7 @@ class PBWB_Counter_Lists extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __('Counters in a row','bit14'),
+                        'heading'       => __('Counters in a row','vc-addons-by-bit14'),
                         'param_name'    => 'desktop_num_slides',
                         'value'         => array(1,2,3,4),
                         'group'         => 'Desktop',
@@ -108,7 +112,7 @@ class PBWB_Counter_Lists extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __('Counters in a row','bit14'),
+                        'heading'       => __('Counters in a row','vc-addons-by-bit14'),
                         'param_name'    => 'tablet_num_slides',
                         'value'         => array(1,2,3),
                         'group'         => 'Tablet',
@@ -116,9 +120,9 @@ class PBWB_Counter_Lists extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Border Foreground', 'bit14' ),
+                        'heading'       => __( 'Border Foreground', 'vc-addons-by-bit14' ),
                         'param_name'    => 'brdrfg',
-                        'description'   => __( 'Highlighted border color', 'bit14' ),
+                        'description'   => __( 'Highlighted border color', 'vc-addons-by-bit14' ),
                         'value'         => '#2c9579',
                         'dependency'    => array(
                             'element'       => 'countertype',
@@ -128,9 +132,9 @@ class PBWB_Counter_Lists extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Border Background', 'bit14' ),
+                        'heading'       => __( 'Border Background', 'vc-addons-by-bit14' ),
                         'param_name'    => 'brdrbg',
-                        'description'   => __( 'Border color', 'bit14' ),
+                        'description'   => __( 'Border color', 'vc-addons-by-bit14' ),
                         'value'         => '#4c4c4c',
                         'dependency'    => array(
                             'element'       => 'countertype',
@@ -140,9 +144,9 @@ class PBWB_Counter_Lists extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Counter Background', 'bit14' ),
+                        'heading'       => __( 'Counter Background', 'vc-addons-by-bit14' ),
                         'param_name'    => 'circlebg',
-                        'description'   => __( 'Background color of circle', 'bit14' ),
+                        'description'   => __( 'Background color of circle', 'vc-addons-by-bit14' ),
                         'value'         => '#2b2c2c',
                         'dependency'    => array(
                             'element'       => 'countertype',
@@ -153,15 +157,15 @@ class PBWB_Counter_Lists extends WPBakeryShortCode {
                     array(
                         'type'          => 'param_group',
                         'param_name'    => 'counters',
-                        'description'   => __( 'Enter values for counters', 'bit14' ),
+                        'description'   => __( 'Enter values for counters', 'vc-addons-by-bit14' ),
                         'value'         => '',
                         'params'        => array(
 
                             array(
                                 'type'          => 'dropdown',
-                                'heading'       => __( 'Show icon', 'bit14' ),
+                                'heading'       => __( 'Show icon', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'is_icon',
-                                'description'   => __( 'Show/Hide icon. Icons will not be displayed on Progress Meter', 'bit14' ),
+                                'description'   => __( 'Show/Hide icon. Icons will not be displayed on Progress Meter', 'vc-addons-by-bit14' ),
                                 'value'         => array(
                                     "Show"          =>  'show',
                                     "Hide"          =>  'hide'
@@ -169,14 +173,14 @@ class PBWB_Counter_Lists extends WPBakeryShortCode {
                             ),
                             array(
                                 'type'          => 'iconpicker',
-                                'heading'       => __( 'Icon', 'js_composer' ),
+                                'heading'       => __( 'Icon', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'icon',
                                 'value'         => 'vc_pixel_icon vc_pixel_icon-alert',
                                 'settings'      => array(
                                     'emptyIcon'     => false,
                                     'type'          => 'fontawesome',
                                 ),
-                                'description'   => __( 'Select icon from library.', 'js_composer' ),
+                                'description'   => __( 'Select icon from library.', 'vc-addons-by-bit14' ),
                                 'dependency'    => array(
                                     'element'       => 'is_icon',
                                     'value'         => 'show',
@@ -184,9 +188,9 @@ class PBWB_Counter_Lists extends WPBakeryShortCode {
                             ),
                             array(
                                 'type'          => 'colorpicker',
-                                'heading'       => __( 'Icon Color', 'bit14' ),
+                                'heading'       => __( 'Icon Color', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'icon_color',
-                                'description'   => __( 'The selected color will be applied on icon and number depending on the theme selected', 'bit14' ),
+                                'description'   => __( 'The selected color will be applied on icon and number depending on the theme selected', 'vc-addons-by-bit14' ),
                                 'value'         => '#000000',
                                 'dependency'    => array(
                                     'element'       => 'is_icon',
@@ -195,46 +199,46 @@ class PBWB_Counter_Lists extends WPBakeryShortCode {
                             ),
                             array(
                                 'type'          => 'textfield',
-                                'heading'       => __( 'Number', 'bit14' ),
+                                'heading'       => __( 'Number', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'number',
-                                'description'   => __( 'Enter Only Number Not Special Character For Counter / Progress Meter. (If "progress meter" is selected, numbers must be between 1-100)', 'bit14' ),
+                                'description'   => __( 'Enter Only Number Not Special Character For Counter / Progress Meter. (If "progress meter" is selected, numbers must be between 1-100)', 'vc-addons-by-bit14' ),
                                 'admin_label'   => true,
                                 'value'         => '',
                             ),
                             array(
                                 'type'          => 'textfield',
-                                'heading'       => __( 'Title', 'bit14' ),
+                                'heading'       => __( 'Title', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'title',
-                                'description'   => __( 'Enter Text For Counter.', 'bit14' ),
+                                'description'   => __( 'Enter Text For Counter.', 'vc-addons-by-bit14' ),
                                 'admin_label'   => true,
                                 'value'         => '',
                             ),
                             array(
                                 'type'          => 'textarea',
-                                'heading'       => __( 'Title', 'bit14' ),
+                                'heading'       => __( 'Title', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'description',
-                                'description'   => __( 'Enter Description For Counter.', 'bit14' ),
+                                'description'   => __( 'Enter Description For Counter.', 'vc-addons-by-bit14' ),
                                 'value'         => '',
                             ),
                             array(
                                 'type'          => 'colorpicker',
-                                'heading'       => __( 'Color', 'bit14' ),
+                                'heading'       => __( 'Color', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'color',
-                                'description'   => __( 'Color theme for counter.', 'bit14' ),
+                                'description'   => __( 'Color theme for counter.', 'vc-addons-by-bit14' ),
                                 'value'         => '#ffffff',
                             ),
                             array(
                                 'type'          => 'colorpicker',
-                                'heading'       => __( 'Color For Counter Title', 'bit14' ),
+                                'heading'       => __( 'Color For Counter Title', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'color_title',
-                                'description'   => __( 'Color For Counter Title.', 'bit14' ),
+                                'description'   => __( 'Color For Counter Title.', 'vc-addons-by-bit14' ),
                                 'value'         => '#ffffff',
                             ),
                             array(
                                 'type'          => 'colorpicker',
-                                'heading'       => __( 'Color For Counter Description', 'bit14' ),
+                                'heading'       => __( 'Color For Counter Description', 'vc-addons-by-bit14' ),
                                 'param_name'    => 'color_description',
-                                'description'   => __( 'Color For Counter Description.', 'bit14' ),
+                                'description'   => __( 'Color For Counter Description.', 'vc-addons-by-bit14' ),
                                 'value'         => '#ffffff',
                             ),
                         ),
@@ -244,7 +248,7 @@ class PBWB_Counter_Lists extends WPBakeryShortCode {
                     array(
                         "type"          => "vc_links",
                         "param_name"    => "bit_caption_url",
-                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;">Get the Pro version for more elements and customization options.</a></span>', 'bit14' ),
+                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;">Get the Pro version for more elements and customization options.</a></span>', 'vc-addons-by-bit14' ),
                     ), 
                 ),
             )

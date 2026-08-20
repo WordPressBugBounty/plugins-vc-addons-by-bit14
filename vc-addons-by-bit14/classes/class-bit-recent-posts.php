@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class PBWB_Recent_Posts extends WPBakeryShortCode {
 	
 	function __construct(){
@@ -31,7 +35,7 @@ class PBWB_Recent_Posts extends WPBakeryShortCode {
                       $google_fonts           = array(
                         "type"          => "vc_links",
                         "param_name"    => "bit_caption_url",
-                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'bit14' ),
+                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'vc-addons-by-bit14' ),
                     );
 
         if($enable_googlefonts == "1"){
@@ -40,8 +44,8 @@ class PBWB_Recent_Posts extends WPBakeryShortCode {
                 'param_name' => 'google_text_font',
                 'settings' => array(
                     'fields' => array(
-                        'font_family_description' => __( 'Select Font Family.', 'bit14' ),
-                        'font_style_description' => __( 'Select Font Style.', 'bit14' ),
+                        'font_family_description' => __( 'Select Font Family.', 'vc-addons-by-bit14' ),
+                        'font_style_description' => __( 'Select Font Style.', 'vc-addons-by-bit14' ),
                     ),
                 ), 
                 'weight' => 0,
@@ -51,32 +55,32 @@ class PBWB_Recent_Posts extends WPBakeryShortCode {
         // Map the block with vc_map()
         vc_map( 
             array(
-                'name'          => __('Recent Post', 'bit14'),
+                'name'          => __('Recent Post', 'vc-addons-by-bit14'),
                 'base'          => 'recent-post',
-                'description'   => __('Categorize your posts in a grid format to keep them organized', 'bit14'),
-                'category'      => __('PB Addons', 'bit14'),
+                'description'   => __('Categorize your posts in a grid format to keep them organized', 'vc-addons-by-bit14'),
+                'category'      => __('PB Addons', 'vc-addons-by-bit14'),
                 'icon'          => plugin_dir_url(__DIR__) . 'assets/images/recent-posts.png',
                 'params'        => array(
 
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Element ID', 'bit14' ),
+                        'heading'       => __( 'Element ID', 'vc-addons-by-bit14' ),
                         'param_name'    => 'id',
-                        'description'   => __( 'Element ID', 'bit14' ),
+                        'description'   => __( 'Element ID', 'vc-addons-by-bit14' ),
                         'group'         => 'General'
                     ),
 
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Extra Class Name', 'bit14' ),
+                        'heading'       => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'param_name'    => 'class',
-                        'description'   => __( 'Extra Class Name', 'bit14' ),
+                        'description'   => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'group'         => 'General'
                     ),
 
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Theme Style', 'bit14' ),
+                        'heading'       => __( 'Theme Style', 'vc-addons-by-bit14' ),
                         'param_name'    => 'theme_style',
                         'group'         => 'General',
                         'value'         => array(
@@ -87,7 +91,7 @@ class PBWB_Recent_Posts extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'checkbox',
-                        'heading'       => __( 'Hide Featured Image', 'bit14' ),
+                        'heading'       => __( 'Hide Featured Image', 'vc-addons-by-bit14' ),
                         'param_name'    => 'hide_featured',
                         'group'         => 'General',
                         'dependency'    => array(
@@ -98,16 +102,16 @@ class PBWB_Recent_Posts extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'checkbox',
-                        'heading'       => __( 'Show Pagination', 'bit14' ),
+                        'heading'       => __( 'Show Pagination', 'vc-addons-by-bit14' ),
                         'param_name'    => 'is_pagination',
                         'group'         => 'General',
                     ),
 
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Posts per page', 'bit14' ),
+                        'heading'       => __( 'Posts per page', 'vc-addons-by-bit14' ),
                         'param_name'    => 'posts_per_page',
-                        'description'   => __( 'Number of posts to show on one page(Numeric values only.)', 'bit14' ),
+                        'description'   => __( 'Number of posts to show on one page(Numeric values only.)', 'vc-addons-by-bit14' ),
                         'group'         => 'General',
                         'dependency'    => array(
                             'element'       =>  'is_pagination',
@@ -117,7 +121,7 @@ class PBWB_Recent_Posts extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Pagination Theme', 'bit14' ),
+                        'heading'       => __( 'Pagination Theme', 'vc-addons-by-bit14' ),
                         'param_name'    => 'pagination_theme',
                         'group'         => 'General',
                         'value'         => array(
@@ -133,7 +137,7 @@ class PBWB_Recent_Posts extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Pagination hover background', 'bit14' ),
+                        'heading'       => __( 'Pagination hover background', 'vc-addons-by-bit14' ),
                         'param_name'    => 'pagination_hover_bg',
                         'group'         => 'General',
                         'dependency'    => array(
@@ -144,7 +148,7 @@ class PBWB_Recent_Posts extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Pagination hover color', 'bit14' ),
+                        'heading'       => __( 'Pagination hover color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'pagination_hover_color',
                         'group'         => 'General',
                         'dependency'    => array(
@@ -155,30 +159,30 @@ class PBWB_Recent_Posts extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Primary Color', 'bit14' ),
+                        'heading'       => __( 'Primary Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'primary_color',
                         'group'         => 'General',
                     ),
 
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Secondary Color', 'bit14' ),
+                        'heading'       => __( 'Secondary Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'secondary_color',
                         'group'         => 'General',
                     ),
 
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Category', 'bit14' ),
+                        'heading'       => __( 'Category', 'vc-addons-by-bit14' ),
                         'param_name'    => 'post_category',
-                        'description'   => __( 'Posts with the selected category will be shown only', 'bit14' ),
+                        'description'   => __( 'Posts with the selected category will be shown only', 'vc-addons-by-bit14' ),
                         'group'         => 'General',
                         'value'         => $post_categories,
                     ),
                     $google_fonts,
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __('Slides in a row','bit14'),
+                        'heading'       => __('Slides in a row','vc-addons-by-bit14'),
                         'param_name'    => 'desktop_num_slides',
                         'value'         => array(1,2,3,4),
                         'group'         => 'Desktop',
@@ -186,7 +190,7 @@ class PBWB_Recent_Posts extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __('Slides in a row','bit14'),
+                        'heading'       => __('Slides in a row','vc-addons-by-bit14'),
                         'param_name'    => 'tablet_num_slides',
                         'value'         => array(1,2,3),
                         'group'         => 'Tablet'
@@ -194,7 +198,7 @@ class PBWB_Recent_Posts extends WPBakeryShortCode {
 
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __('Slides in a row','bit14'),
+                        'heading'       => __('Slides in a row','vc-addons-by-bit14'),
                         'param_name'    => 'mobile_num_slides',
                         'value'         => array(1,2),
                         'group'         => 'Mobile',

@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class PBWB_Ribbon extends WPBakeryShortCode {
     function __construct(){
 
@@ -20,7 +24,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
         $google_fonts           = array(
             "type"          => "vc_links",
             "param_name"    => "bit_caption_url",
-            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'bit14' ),
+            "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'vc-addons-by-bit14' ),
         );
 
         if($enable_googlefonts == "1"){
@@ -29,8 +33,8 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                 'param_name' => 'google_text_font',
                 'settings' => array(
                     'fields' => array(
-                        'font_family_description' => __( 'Select Font Family.', 'bit14' ),
-                        'font_style_description' => __( 'Select Font Style.', 'bit14' ),
+                        'font_family_description' => __( 'Select Font Family.', 'vc-addons-by-bit14' ),
+                        'font_style_description' => __( 'Select Font Style.', 'vc-addons-by-bit14' ),
                     ),
                 ), 
                 'weight' => 0,
@@ -40,15 +44,15 @@ class PBWB_Ribbon extends WPBakeryShortCode {
         // Map the block with vc_map()
         vc_map(
             array(
-                'name'          => __('Ribbon', 'bit14'),
+                'name'          => __('Ribbon', 'vc-addons-by-bit14'),
                 'base'          => 'ribbon',
-                'description'   => __('Mark single/multiple posts to make them prominent', 'bit14'),
-                'category'      => __('PB Addons', 'bit14'),
+                'description'   => __('Mark single/multiple posts to make them prominent', 'vc-addons-by-bit14'),
+                'category'      => __('PB Addons', 'vc-addons-by-bit14'),
                 'icon'          => plugin_dir_url(__DIR__) . 'assets/images/ribbon.png',
                 'params'        => array(
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Themes', 'bit14' ),
+                        'heading'       => __( 'Themes', 'vc-addons-by-bit14' ),
                         'param_name'    => 'theme_style',
                         'value'         => array(
                             'Theme One'         => 'ribbon-theme-one',
@@ -59,7 +63,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Variation', 'bit14' ),
+                        'heading'       => __( 'Variation', 'vc-addons-by-bit14' ),
                         'param_name'    => 'variation_t1',
                         'value'         => array(
                             'Variation One'         => 'ribbon-t1-variation-one',
@@ -74,7 +78,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Variation', 'bit14' ),
+                        'heading'       => __( 'Variation', 'vc-addons-by-bit14' ),
                         'param_name'    => 'variation_t2',
                         'value'         => array(
                             'Variation One'         => 'ribbon-t2-variation-one',
@@ -90,7 +94,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Variation', 'bit14' ),
+                        'heading'       => __( 'Variation', 'vc-addons-by-bit14' ),
                         'param_name'    => 'variation_t3',
                         'value'         => array(
                             'Variation One'         => 'ribbon-t3-variation-one',
@@ -104,7 +108,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Variation', 'bit14' ),
+                        'heading'       => __( 'Variation', 'vc-addons-by-bit14' ),
                         'param_name'    => 'variation_t4',
                         'value'         => array(
                             'Variation One'         => 'ribbon-t4-variation-one',
@@ -118,19 +122,19 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Ribbon Heading', 'bit14' ),
+                        'heading'       => __( 'Ribbon Heading', 'vc-addons-by-bit14' ),
                         'param_name'    => 'ribbon_heading',
                         'admin_label'   => true,
                     ),
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Ribbon Text', 'bit14' ),
+                        'heading'       => __( 'Ribbon Text', 'vc-addons-by-bit14' ),
                         'param_name'    => 'ribbon_text',
                         'admin_label'   => true,
                     ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Content Background Color', 'bit14' ),
+                        'heading'       => __( 'Content Background Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'content_bg_t2_v2_color',
                         'dependency'    => array(
                             'element'       => 'variation_t2',
@@ -139,7 +143,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'attach_image',
-                        'heading'       => __( 'Content Background Image', 'bit14' ),
+                        'heading'       => __( 'Content Background Image', 'vc-addons-by-bit14' ),
                         'param_name'    => 'content_bg_t2_v2_image',
                         'dependency'    => array(
                             'element'       => 'variation_t2',
@@ -148,7 +152,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     // array(
                     //     'type'          => 'attach_image',
-                    //     'heading'       => __( 'Content Image', 'bit14' ),
+                    //     'heading'       => __( 'Content Image', 'vc-addons-by-bit14' ),
                     //     'param_name'    => 'content_t3_v3_image',
                     //     'dependency'    => array(
                     //         'element'       => 'variation_t4',
@@ -157,7 +161,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     // ),
                     array(
                         'type'          => 'attach_image',
-                        'heading'       => __( 'Content Image', 'bit14' ),
+                        'heading'       => __( 'Content Image', 'vc-addons-by-bit14' ),
                         'param_name'    => 'content_t3_v3_image',
                         'dependency'    => array(
                             'element'       => 'variation_t3',
@@ -166,7 +170,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'attach_image',
-                        'heading'       => __( 'Content Background Image', 'bit14' ),
+                        'heading'       => __( 'Content Background Image', 'vc-addons-by-bit14' ),
                         'param_name'    => 'content_bg_t3_v3_image',
                         'dependency'    => array(
                             'element'       => 'variation_t3',
@@ -175,7 +179,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Content Background Color', 'bit14' ),
+                        'heading'       => __( 'Content Background Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'content_bg_t3_v3_color',
                         'dependency'    => array(
                             'element'       => 'variation_t3',
@@ -184,7 +188,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'attach_image',
-                        'heading'       => __( 'Content Image', 'bit14' ),
+                        'heading'       => __( 'Content Image', 'vc-addons-by-bit14' ),
                         'param_name'    => 'content_t4_v4_image',
                         'dependency'    => array(
                             'element'       => 'variation_t4',
@@ -193,7 +197,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'attach_image',
-                        'heading'       => __( 'Content Background Image', 'bit14' ),
+                        'heading'       => __( 'Content Background Image', 'vc-addons-by-bit14' ),
                         'param_name'    => 'content_bg_t4_v4_image',
                         'dependency'    => array(
                             'element'       => 'variation_t4',
@@ -202,7 +206,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Content Background Color', 'bit14' ),
+                        'heading'       => __( 'Content Background Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'content_bg_t4_v4_color',
                         'dependency'    => array(
                             'element'       => 'variation_t4',
@@ -211,7 +215,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'dropdown',
-                        'heading'       => __( 'Content Background', 'bit14' ),
+                        'heading'       => __( 'Content Background', 'vc-addons-by-bit14' ),
                         'param_name'    => 'background',
                         'value'         => array(
                             'Image'         => 'image',
@@ -224,7 +228,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'attach_image',
-                        'heading'       => __( 'Content Background Image', 'bit14' ),
+                        'heading'       => __( 'Content Background Image', 'vc-addons-by-bit14' ),
                         'param_name'    => 'content_bg_image',
                         'dependency'    => array(
                             'element'       => 'background',
@@ -233,7 +237,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Content Background Color', 'bit14' ),
+                        'heading'       => __( 'Content Background Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'content_bg_color',  
                         'dependency'    => array(
                             'element'       => 'background',
@@ -242,7 +246,7 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'attach_image',
-                        'heading'       => __( 'Ribbon Image', 'bit14' ),
+                        'heading'       => __( 'Ribbon Image', 'vc-addons-by-bit14' ),
                         'param_name'    => 'ribbon_image_t2_v3',  
                         'dependency'    => array(
                             'element'       => 'variation_t2',
@@ -251,17 +255,17 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Ribbon Text Color', 'bit14' ),
+                        'heading'       => __( 'Ribbon Text Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'ribbon_text_color',  
                     ),
                     array(
                         'type'          => 'colorpicker',
-                        'heading'       => __( 'Ribbon Background Color', 'bit14' ),
+                        'heading'       => __( 'Ribbon Background Color', 'vc-addons-by-bit14' ),
                         'param_name'    => 'ribbon_background_color', 
                     ),
                     array(
                         'type'          => 'attach_image',
-                        'heading'       => __( 'Ribbon Background Image', 'bit14' ),
+                        'heading'       => __( 'Ribbon Background Image', 'vc-addons-by-bit14' ),
                         'param_name'    => 'ribbon_bg_image',
                         'dependency'    => array(
                             'element'       => 'variation_t4',
@@ -270,28 +274,28 @@ class PBWB_Ribbon extends WPBakeryShortCode {
                     ),
                     array(
                         "type"          => "textarea_html",
-                        "heading"       => __( "Tab Content", "Bit14" ),
+                        "heading"       => __( "Tab Content", "vc-addons-by-bit14" ),
                         "param_name"    => "content",
                     ),
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Element ID', 'bit14' ),
+                        'heading'       => __( 'Element ID', 'vc-addons-by-bit14' ),
                         'param_name'    => 'id',
-                        'description'   => __( 'Element ID', 'bit14' ),
+                        'description'   => __( 'Element ID', 'vc-addons-by-bit14' ),
                         'group'         => 'Attributes'
                     ),
                     array(
                         'type'          => 'textfield',
-                        'heading'       => __( 'Extra Class Name', 'bit14' ),
+                        'heading'       => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'param_name'    => 'class',
-                        'description'   => __( 'Extra Class Name', 'bit14' ),
+                        'description'   => __( 'Extra Class Name', 'vc-addons-by-bit14' ),
                         'group'         => 'Attributes'
                     ),
                     $google_fonts,
                     array(
                         "type"          => "vc_links",
                         "param_name"    => "bit_caption_url",
-                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;text-decoration: none;">Get the Pro version for more elements and customization options.</a></span>', 'ihover' ),
+                        "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;"><a href="https://pagebuilderaddons.com/plan-and-pricing/" target="_blank" style="color:white;text-decoration: none;">Get the Pro version for more elements and customization options.</a></span>', 'vc-addons-by-bit14' ),
                     ),
                 ),
             )

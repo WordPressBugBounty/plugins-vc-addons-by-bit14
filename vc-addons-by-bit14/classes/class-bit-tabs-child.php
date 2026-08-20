@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 class WPBakeryShortCode_bit_tab  extends WPBakeryShortCode {
     public $bit_tabcount =1;
     protected function content($atts, $content = array() ) {
@@ -65,7 +69,7 @@ $enable_googlefonts     = get_option( 'bit14_enable_googlefonts' , '1');
 $google_fonts           = array(
     "type"          => "vc_links",
     "param_name"    => "bit_caption_url",
-    "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'bit14' ),
+    "description"   => __( '<span style="Background: #1688b8;padding: 10px; display: block; color: white;font-weight:600;">Enable google fonts form settings for exciting google fonts.</span>', 'vc-addons-by-bit14' ),
 );
 
 if($enable_googlefonts == "1"){
@@ -74,8 +78,8 @@ if($enable_googlefonts == "1"){
         'param_name' => 'google_text_font',
         'settings' => array(
             'fields' => array(
-                'font_family_description' => __( 'Select Font Family.', 'bit14' ),
-                'font_style_description' => __( 'Select Font Style.', 'bit14' ),
+                'font_family_description' => __( 'Select Font Family.', 'vc-addons-by-bit14' ),
+                'font_style_description' => __( 'Select Font Style.', 'vc-addons-by-bit14' ),
             ),
         ), 
         'weight' => 0,
@@ -85,8 +89,8 @@ if($enable_googlefonts == "1"){
 
 vc_map(
     array(
-        "name"                                      =>  __( 'Tab', 'bit14' ),
-        "description"                               =>  __( 'Display detailed content in a compact layout', 'bit14' ),
+        "name"                                      =>  __( 'Tab', 'vc-addons-by-bit14' ),
+        "description"                               =>  __( 'Display detailed content in a compact layout', 'vc-addons-by-bit14' ),
         "base"                                      =>  "Bit_Tab",
         "class"                                     =>  "Bit_Tab",
         "as_child"                                  =>  array('only' => 'Bit_Tabs'),
@@ -98,41 +102,41 @@ vc_map(
 
             array(
                 'type'          =>  'textfield',
-                'heading'       =>  __( 'Tab ID', 'bit14' ),
+                'heading'       =>  __( 'Tab ID', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'id',
-                'description'   =>  __( 'Tab Specific ID', 'bit14' ),
+                'description'   =>  __( 'Tab Specific ID', 'vc-addons-by-bit14' ),
             ),
 
             array(
                 'type'          =>  'textfield',
-                'heading'       =>  __( 'Tab Class Name', 'bit14' ),
+                'heading'       =>  __( 'Tab Class Name', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'class',
-                'description'   =>  __( 'Extra Class Name', 'bit14' ),
+                'description'   =>  __( 'Extra Class Name', 'vc-addons-by-bit14' ),
             ),
 
             array(
                 'type'          =>  'textfield',
-                'heading'       =>  __( 'Title', 'bit14' ),
+                'heading'       =>  __( 'Title', 'vc-addons-by-bit14' ),
                 'param_name'    =>  'tab_title',
-                'description'   =>  __( 'Title of the tab', 'bit14' ),
+                'description'   =>  __( 'Title of the tab', 'vc-addons-by-bit14' ),
             ),
 
             array(
                 'type'          => 'iconpicker',
-                'heading'       => __( 'Icon', 'js_composer' ),
+                'heading'       => __( 'Icon', 'vc-addons-by-bit14' ),
                 'param_name'    => 'tab_icon',
                 'value'         => 'vc_pixel_icon vc_pixel_icon-alert',
                 'settings'      => array(
                     'emptyIcon'     => true,
                     'type'          => 'fontawesome',
                 ),
-                'description'   => __( 'Select icon from library.', 'js_composer' ),
+                'description'   => __( 'Select icon from library.', 'vc-addons-by-bit14' ),
             ),
 
             array(
                 "type"          => "textarea",
                 "class"         => "",
-                "heading"       => __( "Tab Content", "Bit14" ),
+                "heading"       => __( "Tab Content", "vc-addons-by-bit14" ),
                 "param_name"    => "tab_description",
                 "value"         => '',
             ),
