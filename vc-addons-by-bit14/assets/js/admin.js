@@ -14,7 +14,8 @@ if (typeof (jQuery) != 'undefined') {
 
         pb_addons(document).ready(function($) {
                 
-            // Toggle an addon state.            $( document ).on( 'click', '.aboutus-page-admin .sib-product button', function( event ) {
+            // Toggle an addon state.
+            $( document ).on( 'click', '.aboutus-page-admin .sib-product button', function( event ) {
         
                 event.preventDefault();
 

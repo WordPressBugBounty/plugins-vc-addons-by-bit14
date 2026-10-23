@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /*
 Plugin Name: Page Builder Addons for WPBakery
 Description: Page Builder Addons for WPBakery are a pack of premium quality addons
-Version: 1.6
+Version: 1.6.1
 Author: Page Builder Addons
 Author URI: https://www.pagebuilderaddons.com
 Text Domain: vc-addons-by-bit14

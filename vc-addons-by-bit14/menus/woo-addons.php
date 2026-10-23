@@ -8,7 +8,7 @@ function pbwb_woo_addons_list_page(){
     ?>
     <div id="container"  class="bit14-admin-addons">
         <div class="heading">
-            <img src="<?php echo esc_url(plugin_dir_url(__FILE__).'../assets/images/pb-logo.png'); ?>" />
+            <img src="<?php echo esc_url(plugin_dir_url(__FILE__).'../assets/images/pb-logo.svg'); ?>" />
             <h1 class="title">PB WooCommerce Addons for WPBakery Page Builder</h1>
             <p>Build your online store with premium quality WooCommerce elements for WPBakery Page Builder.</p>
         </div>

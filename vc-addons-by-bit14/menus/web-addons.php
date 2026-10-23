@@ -8,7 +8,7 @@ function pbwb_addons_list_page(){
     ?>
     <div id="container"  class="bit14-admin-addons">
         <div class="heading">
-            <img src="<?php echo esc_url(plugin_dir_url(__FILE__).'../assets/images/pb-logo.png'); ?>" />
+            <img src="<?php echo esc_url(plugin_dir_url(__FILE__).'../assets/images/pb-logo.svg'); ?>" />
             <h1 class="title">PB All-in-One Web Addons for WPBakery Page Builder</h1>
             <p>Build your website with premium quality All-in-One Web elements for WPBakery Page Builder. This includes Web Addons, Library templates and Custom post type.</p>
         </div>

@@ -4,8 +4,8 @@ Contributors: pagebuilderaddons, genetechproducts
 Tags: woocommerce, wpbakery addons, wpbakery, visual composer, page builder, addons
 Requires at least: 4.0
 Tested up to: 7.1
-Requires PHP: 7.0
-Stable tag: 1.6
+Requires PHP: 8.2
+Stable tag: 1.6.1
 License: GPLv2 or later
 
 Clean, responsive, well designed addons for WPBakery Page Builder with custom post type
@@ -323,6 +323,11 @@ Open Visual Composer Editor -> click on add element -> click on tab PB Addons. c
 14. Business Hours
 
 == Changelog ==
+
+= 1.6.1 =
+- Updated: New Page Builder Addons logo on the About Us, Web Addons and Woo Addons pages.
+- Fixed: Activate/Install buttons on the About Us page not working.
+- Updated: Minimum required PHP version is now 8.2.
 
 = 1.6 =
 - Fixed: Text domain mismatch across all PHP files (updated to vc-addons-by-bit14).

@@ -50,7 +50,7 @@ function pbwb_about_us_page(){
 <div id="container"  class="pb-admin aboutus-page-admin">
     <div class="aboutus-page">
         <div class="aboutus-header">
-            <img src="<?php echo esc_url(plugin_dir_url(__FILE__)."../assets/images/pb-logo.png"); ?>" alt="PB Addons Logo">
+            <img src="<?php echo esc_url(plugin_dir_url(__FILE__)."../assets/images/pb-logo.svg"); ?>" alt="PB Addons Logo">
         </div>
     </div>
         
@@ -357,4 +357,4 @@ function get_about_plugin_data( $plugin, $details, $all_plugins ) {
     $plugin_data['details'] = $details;
 
     return $plugin_data;
-}
+}
